@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid class Four</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: aquamarine;
+            margin: 0;
+            padding: 0;
+        }
+        .main-container{
+            width: 100%;
+     
+
+        }
+        .header{
+            width: 100%;
+            height: 10%;
+            background-color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .header-links{
+            width: 100%;
+            height:100% ;
+            background-color: white;
+            font-size: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+           
+        }
+        /* home section css */
+        .home{
+            width: 100%;
+            height: 50%;
+            background-color:white;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+       
+        }
+        .home-one{
+            width: 100%;
+            height: 600px;
+            background-color: aquamarine;
+            display: grid;
+        }
+        .home-top{
+            width: 100%;
+            height: 300px;
+            background-color: white;
+        }
+        .home-bottom{
+            width: 100%;
+            height: 300px;
+            background-color: white;
+        }
+        .home-two{
+            width: 100%;
+            height: 600px;
+            background-color: azure;
+        }
+        .mini-logo{
+            background-color: white;
+        }
+       /* footer section css */
+        .footer{
+            width: 100%;
+            background-color: white;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap:15px;
+            border-radius: 30px;
+        }
+        .box-one{
+            height: 300px;
+            background-color: rgb(202, 168, 168);
+        }
+        .box-two{
+         
+            height: 300px;
+            background-color: rgb(202, 168, 168);
+        }
+        .box-three{
+         
+            height: 300px;
+            background-color: rgb(202, 168, 168);
+        }
+        .box-four{
+          
+            height: 300px;
+            background-color: rgb(202, 168, 168);
+        }
+        .box-five{
+           
+            height: 300px;  
+            background-color: rgb(202, 168, 168);
+        }
+        .image{
+            width: 80%;
+            margin-top: 20px;
+            margin-left: 20px;
+            border-radius: 30px;
+            
+
+        }
+        h2{
+            text-align: center;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header"><h1>Fruit shop</h1>
+            <div class="header-links">
+                <span>Home</span>
+                <span>Product</span>
+                <span>About</span>
+                <span>Contact</span>
+            </div>
+            
+        </div>
+        <div class="home">
+            <div class="home-one">
+                <div class="home-top"><h2>Welcome to Fruit Shop</h2></div>
+                <div class="home-bottom"><h3>A shop that sells a variety of edible. <br>Fruit is the sweet, fleshy, edible part of a plant.</h3></div>
+            </div>
+            <div class="home-two">
+                <img class="image" src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZnJ1aXR8ZW58MHx8MHx8fDA%3D" height="400px" width="400px">
+            </div>
+        </div>
+        <div class="footer">
+            <div class="box-one">
+                <img class="image" src="https://media.post.rvohealth.io/wp-content/uploads/2021/05/apples-1200x628-facebook.jpg">
+                <h2>Apple</h2>
+            </div>
+            <div class="box-two">
+                <img class="image" src="https://cdnimg.webstaurantstore.com/uploads/blog/2021/5/fresh-dragon-fruit-sliced-in-half-on-wooden-board-min.jpg">
+                <h2>Dragon Fruit</h2> 
+            </div>
+            
+            <div class="box-three">
+                <img class="image" src="https://hips.hearstapps.com/hmg-prod/images/papaya-fruit-royalty-free-image-1690494910.jpg?crop=0.66635xw:1xh;center,top&resize=980:">
+                <h2>Papaya</h2>
+            </div>
+            <div class="box-four">
+                <img class="image" src="https://www.sakraworldhospital.com/assets/spl_splimgs/benefits-kiwi-of-fruit.webp">
+                <h2>Kivi</h2>
+            </div>
+            <div class="box-five">
+                <img class="image" src="https://www.exotic-fruit.com/img/products/totapuri_1.jpg" >
+                <h2>Mango</h2>
+            </div>
+        </div>
+
+    </div>
+    
+    
+
+    
+</body>
+</html>

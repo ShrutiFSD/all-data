@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js class one</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .container{
+            width: 25%;
+            height: 80%;
+            border-color: black;
+            border-style: solid;
+            margin-left: 30%;
+           
+        }
+        .display{
+            width: 80%;
+            height: 30%;
+            background-color: lightgreen;
+            border-color: black;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        .input-field{
+            margin-left: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="display"></div>
+        <div class="input-field">
+            <input type="number" id="input" placeholder="Enter a number">
+        </div>
+        <button class="btn" onclick="shamu()">submit</button>
+
+
+
+    </div>
+    <script>
+        function myfunction(){
+            alert("Hello Javascript!");
+            let a = 10 
+            console.log(a)
+        }
+
+        function shamu(){
+            document.getElementById("display").innerHTML = 2+2;
+
+        }
+        function displaysum(){
+            document.getElementById("display").innerHTML ="2+2 = "+(2+2);
+            return 10;
+        }
+        function inputvalue(){
+            let number = document.getElementById("input").value;
+             document.getElementById("display").innerHTML = number; //UI
+             console.log(number);//console
+             alert(number);//alert
+        }
+
+    </script>
+    
+</body>
+</html>
