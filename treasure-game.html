@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 30px;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <p id="coin"></p>
+    <button onclick="addCoin()">add coin</button>
+    <button onclick="subtractCoin()">subtract</button><br>
+    <p id="add-coin"></p>
+    <p id="subtract-coin"></p>
+        
+
+
+    
+    <script>
+        let coin = 0;
+        document.getElementById("coin").innerHTML = coin;
+
+        function addCoin(){
+            let getCoin = Number(prompt("enter the coin"));
+            coin +=getCoin;
+            document.getElementById("coin").innerHTML = coin;
+            document.getElementById("add-coin").innerHTML = "you added " + getCoin +" coins";
+        }
+
+        function subtractCoin(){
+            let lossCoin = Number(prompt("enter the coin"));
+            coin -=lossCoin;
+            document.getElementById("coin").innerHTML = coin;
+            document.getElementById("subtract-coin").innerHTML = " you Subtract coin " + lossCoin +" coins";
+        }
+
+    </script>
+
+</body>
+
+</html>

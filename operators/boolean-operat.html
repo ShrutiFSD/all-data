@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Operator</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .input-group{
+            width: 45%;
+            height: 50%;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Drive Eligibility Checker</h1>
+    <div class="input-group">
+        <label for="Eligibility">your Age:</label><br>
+        <input type="number" value="" id="num" placeholder="Enter your age"><br><br>
+        <input type="checkbox" id="hasLisense">
+        <label for="hasLisense">I have a valid driver's license</label><br><br><br><br><br>
+        <button onclick="checkEligibility()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+        
+        
+        
+        
+        "> Check Eligibility</button>
+        <div id="result" ></div>
+    </div>
+   
+    <script>
+        function checkEligibility(){
+            const age = document.getElementById("num").value;
+            const hasLisense = document.getElementById("hasLisence").checked;
+
+            document.getElementById("result").innerHTML = age >=18 && hasLisense
+
+        }
+    </script>
+    
+</body>
+</html>

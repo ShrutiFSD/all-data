@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .main-container {
+            height: 40%;
+            width: 20%;
+            background-color: lightblue;
+            margin-left: 30%;
+            border-style: solid;
+            border-color: black;
+        }
+
+        button {
+            background-color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+       
+        <div id="result"></div><br><br><br><br>
+        <button onclick="addNumber()">click</button>
+    </div>
+    <script>
+         let number = 0;
+         document.getElementById("result").innerHTML = number;
+        function addNumber(){
+            let coin = Number(prompt("enter a number"));
+           
+            number = number + coin;
+            document.getElementById("result").innerHTML = number;
+         
+        }
+    </script>
+   
+
+
+</body>
+
+</html>

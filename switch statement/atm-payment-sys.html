@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="show balance"></p>
+    <input type="number" name="" id="input amount">
+    <button onclick="withdraw()">withdraw</button>
+    <script>
+        let balance = 1000;
+        document.getElementById("show balance").innerHTML = balance;
+        function withdraw(){
+            let amount = document.getElementById("input amount").value;
+            if(amount < balance){
+                if (amount > 0){
+                    if(amount % 100 == 0){
+                        balance = balance - amount;
+                        document.getElementById("show balance").innerHTML = balance;
+                    }
+                    else{
+                        alert("amount shpould be in multiple of 100");
+                    }
+                }
+                else{
+                    alert ("amount should b greater than 0");
+
+                }
+                
+               
+            } else{
+                    alert ("insufficient balance")
+                }
+        }
+
+    </script>
+</body>
+</html>

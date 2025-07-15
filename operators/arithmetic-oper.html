@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-container {
+            height: 90%;
+            width: 40%;
+            background-color: lightblue;
+            border-style: solid;
+            border-color: black;
+            text-align: center;
+            margin-left: 30%;
+        }
+
+        .box {
+            font-size: 20px;
+            border-radius: 4px;
+
+        }
+
+        button {
+            font-size: 30px;
+            background-color: rgb(101, 117, 119);
+            border-radius: 5px;
+        }
+
+        .box2 {
+            background-color: green;
+        }
+
+        .display {
+            width: 90%;
+            height: 20%;
+            background-color: rgb(114, 69, 69);
+            margin-left: 25px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <h1>Arithmetic Operations</h1>
+        <label class="box" for="">First Number</label><br>
+        <input class="box" type="number" placeholder="Enter a Number" id="inputOne"><br><br>
+
+        <label class="box" for="">Second Number</label><br>
+        <input class="box" type="number" placeholder="Enter a Number" id="inputTwo"><br><br>
+        <!-- calculating button -->
+        <button>+</button>
+        <button>-</button>
+        <button>*</button>
+        <button>/</button>
+        <button>%</button><br><br><br>
+        <!-- main button -->
+        <button onclick="calculator()" class="box2">Calculate</button><br>
+       
+        <div>
+            <div     id="result"><h2>Result</h2></div>
+            <p class="display" id="showSum"></p>
+            <p class="display" id="showSub"></p>
+            <p class="display" class="display" id="showMul"></p>
+            <p class="display" id="showDiv"></p>
+            <p class="display" id="showMod"></p>
+            
+
+        </div>
+       
+
+
+
+    </div>
+    <!-- script -->
+    <script>
+        function calculator() {
+            let inputOne = Number(document.getElementById('inputOne').value);
+            let inputTwo = Number(document.getElementById('inputTwo').value);
+            let sum = inputOne + inputTwo;
+            let sub = inputOne - inputTwo;
+            let mul = inputOne * inputTwo;
+            let div = inputOne / inputTwo;
+            let mod = inputOne % inputTwo;
+
+            document.getElementById("showSum").innerHTML = "SUM = " + sum;
+            document.getElementById("showSub").innerHTML = "SUB = " + sub;
+            document.getElementById("showMul").innerHTML = "MUL = " + mul;
+            document.getElementById("showDiv").innerHTML = "DIV = " + div;
+            document.getElementById("showMod").innerHTML = "MOD = " + mod;
+            let display = document.getElementById('result').innerHTML = calculate;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

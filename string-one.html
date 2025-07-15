@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .main-container{
+            height: 60%;
+            width: 25%;
+            background-color: lightblue;
+            border-radius: 10px;
+            border-color: black;
+            border-style: solid;
+            text-align: center;
+            margin-left: 30%;
+
+        }
+        button{
+            background-color: green;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h2>Name Combination</h2>
+        <label>First Name</label><br>
+        <input type="text" placeholder="Enter your Name" id="firstName"><br><br>
+        <label for="name">lastName</label><br>
+        <input type="text" placeholder="Enter your Name" id="lastName"><br><br>
+        <button onclick="combineName()">Combine NAme</button>
+        <div id="result"></div>
+    </div>  
+  </div>
+  <script>
+    function combineName(){
+        //const fisrtName = document.getElementById('firstname').value;
+       // const lastName = document.getElementById('lastname').value;
+
+
+        //combile name
+        //const Fullname = fisrtName+" "+lastName;
+
+        //Display in UI
+       // const resultDiv = document.getElementById('result');
+       // resultDiv
+
+
+        let string1 = document.getElementById('firstName').value;  
+      let string2 = document.getElementById('lastName').value;
+
+      console.log(firstName);
+        console.log(lastName);
+
+
+
+      let result = string1 +" "+ string2;
+
+
+
+      document.getElementById('result').innerHTML =result;
+
+      console.log(result);
+      alert(result)
+      let stringLength = string1.length
+      alert(stringLength);
+
+      let stringUpperCase = string1.toUpperCase();
+      alert(stringUpperCase);
+
+      let sliceString = string1.slice(4,5)
+      alert(sliceString);
+
+
+
+
+    }
+  </script>
+</body>
+</html>

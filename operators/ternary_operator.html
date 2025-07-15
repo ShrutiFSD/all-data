@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="days">
+    <button onclick="getdays()">submit</button>
+    
+    <script>
+       function getdays(){
+         //input days
+         let days = Number(prompt("Enter a number"));
+        let hours = 0;
+        //show error
+        let displayError = "";
+
+        //check day is zero
+
+        if (days > 0){
+            displayError = "Error : Days cannot be zero";
+            alert(displayError);
+        }
+         
+        else {
+            hours = days * 24;
+            
+        }
+
+
+       }
+ 
+
+
+       
+    </script>
+</body>
+</html>

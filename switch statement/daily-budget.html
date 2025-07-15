@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Budget</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .main-container{
+            height: 90%;
+            width: 40%;
+            background-color: lightblue;
+            margin-left: 30%;
+            font-size: 20px;
+            border-color: black;
+          
+            border-radius: 3px;
+            text-align: center;
+        }
+        p{
+            color: rgb(199, 61, 61);
+        }
+        button{
+            background-color: green;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Budget Calculator</h1>
+        <p>Enter your income and expenses to learn how addition, subtraction, division help in budgeting.</p>
+        <label for="income">Income:</label><br>
+        <input type="number " id="income"><br><br>
+        <label for="">Rent</label><br>
+        <input type="number" id="rent"><br><br>
+        <label for="" >Food</label><br>
+        <input type="number" id="food"><br><br>
+        <label for="" >Other Expenses</label><br>
+        <input type="number" id="other"><br><br>
+        <button onclick="Calculate()">Calculate</button><br><br>
+       <div id="result"></div>
+
+    </div>
+    <script>
+        function Calculate(){
+            const income = Number(document.getElementById("income").value);
+            const rent = Number(document.getElementById("rent").value);
+            const food = Number(document.getElementById("food").value);
+            const other = Number(document.getElementById("other").value);
+
+            let totalExpenses = rent + food + other;
+            let savings = income - totalExpenses;
+            let dailyBudget = (savings/30);
+
+            document.getElementById("result").innerHTML = 
+            "Total Expenses:" + totalExpenses+ "<br>" +
+            "Savings:" + savings + "<br>" +
+            "Daily Budget:" + dailyBudget 
+            
+                
+            
+
+        }
+    </script>
+</body>
+</html>

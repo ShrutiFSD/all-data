@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="display"></div>
+        <div class="box"></div>
+        <input type="text" id="input" placeholder="Enter time">
+        <button onclick="showTime()">click here</button>
+        <p id="display"></p>
+
+    </div>
+    <script>
+        function showTime(){
+            //let time = Number(prompt("Enter a time 24 hr:"));
+            var time = Number(document.getElementById("display").value);
+            let greetingMessage ="";
+
+            //let date = new Date();
+            //var time = date.getHours();
+            switch (true){
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11:
+                alert("Good Morningggg");
+                greetingMessage = "Good Morning"
+                break;
+
+                case 12:
+                case 13:
+                case 14:
+                case 15:
+                case 16:
+                case 17:
+                alert("Good Afternoon");
+                greetingMessage = "Good Afternoon"
+                break;
+
+                case (time >= 18 && time <= 21.59):
+                    alert("Goood Evening");
+                    greetingMessage ="Good Eveing"
+                    break;
+                    case (time <= 22 && time >= 24) || (time >= 0 && time <= 4.59):
+                        alert("Good Nighttt");
+                        greetingMessage("Good Night")
+                        break;
+                        default:
+                            alert("Invalid Time");
+                            break;
+
+
+
+            }
+        }
+    </script>
+</body>
+</html>

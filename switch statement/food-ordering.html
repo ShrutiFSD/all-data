@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let menu = {
+    1: { item: "Pizza", price: 150 },
+    2: { item: "Burger", price: 80 },
+    3: { item: "Pasta", price: 120 },
+    4: { item: "Fries", price: 60 },
+    5: { item: "Coffee", price: 50 }
+};
+
+let total = 0;
+let order = "";
+
+console.log("Welcome to the Food Ordering System!");
+console.log("Menu:");
+for (let key in menu) {
+    console.log(`${key}. ${menu[key].item} - ₹${menu[key].price}`);
+}
+
+let userInput = prompt("Enter item number to order (type 'exit' to finish):");
+
+while (userInput !== "exit") {
+    let itemNumber = parseInt(userInput);
+
+    if (menu[itemNumber]) {
+        total += menu[itemNumber].price;
+        order += menu[itemNumber].item + ", ";
+        console.log(`${menu[itemNumber].item} added to your order.`);
+    } else {
+        console.log("Invalid item number. Please try again.");
+    }
+
+    userInput = prompt("Enter next item number or 'exit' to finish:");
+}
+
+console.log(`\nOrder Summary:\nItems: ${order}\nTotal: ₹${total}`);
+    </script>
+</body>
+</html>

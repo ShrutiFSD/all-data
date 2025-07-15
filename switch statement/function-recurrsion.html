@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="display"></p>
+    <script>
+        // function se kiya-------
+        function printNumber(start, end){
+            if (start <= end){
+                document.getElementById("display").innerHTML += start + ",";
+                console.log(start);
+                printNumber(start + 1, end);
+
+            }
+            else{
+                console.log("end");
+            }
+            return 0;
+        }
+         let result = printNumber(1,10);
+         console.log(result);
+
+        //  for loop-------------
+
+        
+    </script>
+</body>
+</html>

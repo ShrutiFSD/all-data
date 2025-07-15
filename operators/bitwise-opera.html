@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-container {
+            height: 60%;
+            width: 25%;
+            background-color: lightblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            border-style: solid;
+            border-color: black;
+            margin-left: 30%;
+            text-align: center;
+        }
+
+        button {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <h1>Even Number Checker</h1>
+        <label for="">Enter a Number</label><br>
+        <input type="number" name="" id=""><br><br>
+        <button onclick="checkNumber()">check button</button><br>
+        <p id="display"></p>
+    </div>
+
+    <script>
+      let number = Number(prompt("Enter a number :"));
+      let result = "";
+
+      if ((number & 1) == 0){
+        result = "Number is even";
+      }
+      else{
+        result = "Number is odd";
+      }
+      alert(result); 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        1.Dhokla rs = 30/a-
+        2.Tarii poha rs = 20/a-
+        3.Dosa rs = 50/-
+        0.Order Finish
+    </pre>
+    <button onclick="foodOrdering()">Order food</button>
+    <p id="display"></p>
+    <script>
+        let total = 0;
+        function foodOrdering(){
+            
+            while(true){
+            let choice = prompt("Enter your choice (or enter 0 to finish)");
+            if(choice == 1){
+                total = total + 30;
+                alert("You Selected Dhokla");
+            }
+            else if (choice == 2){
+                total = total + 20;
+                alert("You Selected tarii poha");
+
+            }
+            else if (choice == 3){
+                total = total + 50;
+                alert("You Selected Dosa");
+        }
+        else if(choice == 0){
+            document.getElementById("display").innerHTML = "your total bill is" + total;
+            break;
+            
+        }
+        else{
+            alert("Invalid choice");
+        }
+    }
+        
+    }
+    </script>
+</body>
+</html>

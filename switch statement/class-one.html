@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        font-size: 30px;
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="display"></p>
+    <button onclick="switchTwoExample()">click me</button>
+    <script>
+      function switchOneExample() {
+        let value = Number(prompt("enter 0 or 1"));
+
+        switch (value) {
+          case 0:
+            alert("off");
+            break;
+
+          case 1:
+            alert("onn");
+            break;
+
+          default:
+            alert("Invalid value");
+        }
+      }
+
+      //-------------------------------------------
+
+      function switchTwoExample() {
+        let fruits = prompt("Enter a fruit name:");
+
+        switch (fruits) {
+          case "apple":
+            display = "Apple is red";
+            alert(display);
+            break;
+
+          case "banana":
+            display = "Banana is yellow";
+            alert(display);
+            break;
+
+          case "orange":
+            display = "Orange is orange";
+            alert(display);
+            break;
+
+            default:
+                display = "Invalid Fruit";
+                alert(display);
+        }
+      }
+    </script>
+  </body>
+</html>

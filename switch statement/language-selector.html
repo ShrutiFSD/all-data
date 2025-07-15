@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="es">Spanish</option>
+        <option value="fr">Bonjour</option>
+    </select>
+    <button onclick="translateT()">turn it</button>
+    <h1 id="showMessage"></h1>
+    <script>
+        function translateT(){
+            let language = document.getElementById("language").value;
+           // alert(language);
+           let show = "";
+           switch(language){
+            case "en":
+                show = "Hello";
+                break;
+                case "hi":
+                show = "namaste";
+                break;
+                case "es":
+                show = "hola";
+                break;
+                case "fr":
+                show = "Bonjour";
+                break;
+           }
+           document.getElementById("showMessage").innerHTML = show;
+        }
+    </script>
+</body>
+</html>

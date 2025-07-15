@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Deposite</title>
+</head>
+<body>
+    <pre>
+        1.Deposite
+        2.Withdraw
+        3.Check Balance
+        4.Exit
+    </pre>
+    <button onclick="bankDeposite()">Check</button>
+    <p id="display"></p>
+    <script>
+        let total = 0;
+        function bankDeposite(){
+            while(true){
+            let userchoice = prompt("Enter the Amount");
+         if (userchoice == 1){
+            let DepositeAmount = Number(prompt("Enter Amount for deposite"));
+            total = total + DepositeAmount;
+            alert("Amount Deposite Succesfully  \n your Balance is" + total);
+         }
+         else if (userchoice == 2){
+            let WithdrawAmount = Number(prompt("Enter Amount for withdraw"));
+            total = total - WithdrawAmount;
+            alert("Amount Withdraw Succesfully  \n your Balance is" + total);
+         }
+         else if (userchoice == 3){
+            alert("your Balance is" + total);
+         }
+         else if(userchoice == 4){
+            break;
+         }
+         else{
+            alert("Invalid Choice");
+         }
+            
+                
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>

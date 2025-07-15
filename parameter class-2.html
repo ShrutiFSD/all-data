@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function & parameter class two</title>
+</head>
+<body>
+    <p id="result"></p>
+    <input type="number" name="" id="input">
+    <button onclick="checkNum()">Check</button>
+    <script>
+        function checkNum(){
+            document.getElementById("input").value;
+        function sum(a,b){
+            return a + b;
+        }
+        function diff(a,b){
+            return a - b;
+
+        }
+        function calculator(x,y){
+            let add = sum(x,y);
+            let sub = diff(x, y)
+            return add
+        }
+
+        let result = calculator(20,10);
+        console.log(result);
+
+        document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

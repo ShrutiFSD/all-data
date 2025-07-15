@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameters</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        //addition
+
+        function sum(a,b){
+            console.log(a + b);
+            return a + b;
+        }
+
+         //subtraction
+
+         function diff(a,b){
+            console.log(a - b);
+            return a - b;
+        }
+
+        //multiplication
+
+        function product (a,b){
+            console.log(a * b);
+            return a * b;
+        }
+
+        //division
+
+        function div(a,b){
+            console.log(a / b);
+            return a / b;
+        }
+
+        
+
+       function calculator(){
+        let add = sum (10,20);
+        let sub = sub (20, 10);
+        let multi = product ( 10,20);
+        let div = div(20, 10);
+        return sub
+       }
+
+       let result = calculator(20,10);
+       console.log(result);
+       document.getElementById("result").innerHTML = result;
+
+     
+
+      
+    </script>
+    
+</body>
+</html>

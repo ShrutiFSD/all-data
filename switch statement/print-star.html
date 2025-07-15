@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <button onclick="printTriangleFour()">check</button>
+    <pre id="display"></pre>
+    <script>
+        // function printStarPattern(){
+        //     let num = 5;
+        //     let print = "";
+             
+
+        //     let i= 1;
+        //     while (i <= num){
+        //         let j = 1;
+        //         while((j <= num)){
+        //             if (i == 1 || i == num || j == num){
+        //                 print += "*";
+
+        //             }
+
+        //         }
+        //     }
+
+        // }
+
+        // function printStarPatternTriangle(){
+        //     let num = 5;
+        //     let print = "";
+
+        //     let i = 1;
+        //     while  (i <= num){
+        //         let j = 1;
+        //         while ( j <= 1){
+        //             if (j <= i || j == i|| i == num){
+        //                 print += "*";
+        //             }
+        //             else{
+        //                 print += "  ";
+        //             }
+        //             j++;
+        //         }
+        //         print += "\n";
+        //         i++;
+        //     }
+        //     document.getElementById("display").innerHTML += print + "<br/>"
+        //     console.log(print);
+        // }
+
+
+
+
+        // function printTriangleTwo(){
+        //     let num = 5;
+        //     let print = "";
+
+        //     let i = 1;
+        //     while(i <= num){
+        //         let j = 1;
+        //         while(j <= (num - i)){
+        //             print += "  ";
+        //             j++;
+        //         }
+        //         let k = 1;
+        //         while(k <= ((2 *i)-1)){
+        //             print += "* ";
+        //             k++;
+        //         }
+        //         print += "\n";
+        //         i++;
+        //     }
+        //     document.getElementById("display").innerHTML+= print + "<br/>";
+        //     console.log(print);
+        // }
+
+//         function printStarPatternThree(){
+//             let num = 5;
+//             let print = "";
+            
+
+//             let i = 1;
+//             while(i <= num){
+//                 let j = 1;
+//                 while(j <= (num - i)){
+//                     print += "  ";
+//                     j++;
+//                 }
+//                 let k = 1;
+//                 while(k <= ((2 *i)-1)){
+//                     if (k == 1|| k == ((2 *i)-1)|| i == num){
+//                         print += "* ";
+//                     }
+//                     else{
+//                     print(" ");
+//                 }
+//                 k++;
+//         }
+//     }
+//     document.getElementById("display").innerHTML += print + "<br/>"
+//     console.log(print);
+// }
+
+function printTriangleFour(){
+    let a = num - 1;
+    let print = "";
+    while (a >= 1){
+        let j = 1;
+        while(j <= (num- a)){
+            print += " ";
+            j++;
+        }
+        let k = 1;
+        while (k <=((2 * a)-1)){
+            if(k == 1 || k == ((2 * a)-1)){
+                print += " ";
+            }
+            else{
+                print += " ";
+            }
+            k++;
+        }
+        print += "\n";
+        a--;
+    }
+    document.getElementById("display").innerHTML += print + "<br/>";
+    console.log(print);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

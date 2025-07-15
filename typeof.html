@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        .main-container{
+            height: 60%;
+            width: 35%;
+            background-color: white;
+            border-style: solid;
+            border-width: 5px;
+            border-color: black;
+            margin-left: 30%;
+            text-align: center;
+
+        }
+        button{
+            background-color: green;
+            border-radius: 5px;
+        }
+        .font{
+            font-size: 30px;
+        }
+        .display{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>JavaScript Data Type</h1>
+       <br><br>
+       <button class="font" onclick="showdataType()">Show Data type</button><br><br>
+       
+       <div class="display" id="display">Result:</div>
+
+    </div>
+   
+    <script>
+        function showdataType(){
+            //string....
+            let string = "Good Morning";
+        let dataType = typeof string;
+       alert("value is:" + string +"\n dataType is:" + dataType);
+       let result = "value is :" + string + "<br/> datatype is :" + dataType
+       document.getElementById('display').innerHTML = result;
+
+       //number...
+        let num = 22;
+        let dataType1 = typeof num;
+        alert("value is : " + num + "\n dataType is : " + dataType1);
+        let result1 = "value is" + num + "<br/> datatype1 is: " + dataType1
+        document.getElementById('display').innerHTML = result1;
+        
+     
+        
+        
+
+        }
+    </script>
+    
+</body>
+</html>

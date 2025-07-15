@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+        }
+        .main-container{
+            height: 60%;
+            width: 25%;
+            background-color: lightblue;
+            border-color: black;
+            border-style: solid;
+            text-align: center;
+            margin-left: 30%;
+        }
+        button{
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Roller Coster Ride Checker</h1>
+        <label for="">Your Age:</label><br>
+        <input type="number" name="" id="age" placeholder="Enter your Age"><br><br>
+        <label for="">Your Height:</label><br>
+        <input type="number" name="" id="height" placeholder="Enter your Height"><br><br>
+        <button onclick="checkEligibility()">Check Eligibilty</button>
+        <p id="result"></p>
+    </div>
+    <script>
+       function checkEligibility(){
+        let age = document.getElementById("age").value;
+        let height = document.getElementById("height").value;
+        let displayMessage = "";
+
+
+        if (age >= 12 && height >= 140){
+            displayMessage = "Eligible to ride";
+        }
+        else{
+            displayMessage = "Not Eligible to ride";
+        }
+        document.getElementById("result").innerHTML = displayMessage;
+
+       }
+    </script>
+</body>
+</html>

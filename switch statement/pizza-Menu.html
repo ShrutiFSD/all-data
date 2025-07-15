@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIZZA MENU</title>
+    <style>
+        button:hover{
+            background-color: aqua;
+        }
+        /* use this  */
+        button:active{
+            background-color: blue; 
+        }
+    </style>
+</head>
+<body>
+    <button onclick="getPizzaSize(1 ,'red')">Small Size Pizza</button>
+    <button onclick="getPizzaSize(2)">Medium Size Pizza</button>
+    <button onclick="getPizzaSize(3)">Large Size Pizza</button>
+    <script>
+        function getPizzaSize(getSize){
+            let size = getSize
+
+            switch(size){
+                case 1:
+                
+                    console.log("Small Size pizza");
+                    break;
+
+                    case 2:
+                    console.log("Medium Size pizza");
+                    alert("Medium Size Pizza")
+                    break;
+
+                    case 3:
+                    console.log("large Size pizza");
+                    break;
+            }
+        }
+
+        //make UI and show this on HTML 
+    </script>
+    
+</body>
+</html>

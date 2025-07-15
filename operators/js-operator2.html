@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arithmetic Operator</title>
+</head>
+<body>
+    <input type="number" placeholder="enter num" id="input-one">
+    <input type="number" placeholder="enter next num" id="input-two">
+    <button onclick="myFunction()">Output</button>
+    <p id="show-sum"></p>
+    <p id="show-diff"></p>
+    <script>
+           let num1 = 0;
+           let num2 = 0;
+
+        function myFunction(){
+            num1 = Number(document.getElementById('input-one').value);
+            num2 = Number(document.getElementById('input-two').value);
+
+
+            console.log( num1 + num2);
+            let sum = num1 + num2
+            document.getElementById('show-sum').innerHTML=sum;
+
+            let diff = num1 - num2
+            document.getElementById('show-diff').innerHTML=diff;
+
+        }
+        
+        function myFunction2(){
+            console.log(num1 - num2)
+        }
+    </script>
+</body>
+</html>
