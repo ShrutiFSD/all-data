@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to my Html page</h1>
+    <p>This is the simple HTML page to demonstate FETCH</p>
+    <p>Feel freee to explore and modify it!!</p>
+    <h3 id="message-output"></h3>
+    <input type="text" placeholder="Enter a number" id="message"/>
+    <button id="clickme" onclick="handlePost()">POST</button>
+    <button id="clickme" onclick="handleGet()">GET</button>
+
+    <script>
+      let arrayOfMessage =[]
+
+      async function handlePost() {
+          const data = JSON.stringify({
+              msg: document.getElementById("message").value
+          })
+
+          let headerBody = {
+              method: "POST",
+              body: data,
+              header:{
+              "Content-Type":"application/json"
+              }
+            }
+          const response = await fetch("http://127.0.0.1:8000/post-message", headerBody)
+          document.getElementById("message").value = "";
+
+
+      }
+      async function handleGet() {
+          let headerBody ={
+              method: "GET"
+          }
+          const respose = await fetch("http://127.0.0.1:8000/get-message",headerBody)
+          document.getElementById("message-output").innerHTML = await response.text();
+
+      }
+    </script>
+  </body>
+</html>

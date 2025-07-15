@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-End Development</title>
+</head>
+<body>
+    <h1>Front-End Development</h1>
+    <p>Front-end Development involves creating the visual and interactive aspect of a website application 
+        .It focuses on the users interface (UI and user experience (UX),ensuring that can navigate and interactive) the site effectively. 
+    </p>
+    <div id="output"></div>
+    <input type="text" id="input-one" placeholder="Enter First string">
+    <input type="text" id="input-two" placeholder="Enter second string"><br><br>
+    <button onclick="sayHello()" id="button-one">Hello</button>
+    <button onclick="greetingTo()">continue</button>
+    <button onclick="sayBye()" id="button-two">bye</button>
+    <script>
+        function letsStart(req){
+            alert("lets start with front end development!" + req)
+        }
+        function sayHello(){
+            let x = document.getElementById("input-one").value;
+            let y = document.getElementById("input-two").value;
+            let z ="Hello" + x + y + " " + lunchBreak("2:00 pm",null,letsStart);
+            
+            document.getElementById("output").innerHTML = z;
+        }
+
+        function sayBye(){
+            let x = document.getElementById("input-one").value;
+            let y = document.getElementById("input-two").value;
+            let z = "bye"+ x + y + " " + lunchBreak(null,"10:00pm");
+            alert(z);
+            document.getElementById("output").innerHTML = z;
+            
+            
+            
+        }
+        function lunchBreak(lunchtime, dinnertime,xyz){
+            xyz();
+            let x = "";
+            if (linchtime){
+            x += "we will be taking a lunch break at "+ lunchtime;}
+            if (dinnertime){
+            y = "we will be taking a dinner break at "+ dinnertime;}
+            return x + "and" + y;
+        }
+        function greetingTo(){
+            let x = document.getElementById("input-one").value;
+            let y = document.getElementById("input-two").value;
+            let z ="Hello" + x + y + " " + lunchBreak("2:00pm","10:00 pm")
+            alert(z)
+            document.getElementById("output").innerHTML = z;
+
+        }
+        
+        // const addString = function (str1,str2){
+        //     let x = str1 + str2;
+        //     return x;
+        // }
+        // const addNumber = (str1,str2) =>{
+        //     let x = str1 + str2;
+        //     return x;
+        // }
+
+    </script>
+</body>
+</html>

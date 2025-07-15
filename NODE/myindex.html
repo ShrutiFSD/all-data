@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Custom HTML page</title>
+</head>
+<body>
+    <h1>Welcome tto my html page</h1>
+    <p>This is a basic HTML Page for FETCH</p>
+    <p>Feel Free to modify</p>
+    <button id="buttonOne" onclick="handleClick()">Click me</button>
+    <script>
+      async function handleClick(){
+        alert("Button clicked!");
+         const response = await fetch("http://localhost:3000/Hello",
+           {
+             method: "GET",
+           }
+        )
+        alert("Response received: " + await Response.text());
+
+       }
+    </script>
+</body>
+</html>
