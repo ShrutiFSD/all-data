@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Js function and parameters</title>
+    <link rel="stylesheet" href="js-class-four.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="display" id="screen">
+            <span id="display">Display</span>
+        </div>
+        <div class="week-container">
+            <button onclick="showdays('Sunday','lightblue')">Sunday
+                <p id="display"></p>
+            </button>
+            <button onclick="showdays('Monday','lightgreen')">Monday</button>
+            <button onclick="showdays('Tuesday','lightpink')">Tuesday</button>
+            <button onclick="showdays('Wednesday','lightyellow')">Wednesday</button>
+            <button onclick="showdays('Thursday','skyblue')">Thurday</button>
+            <button onclick="showdays('Friday','purple')">Friday</button>
+            <button onclick="showdays('Saturday','orange')">Saturday</button>
+    
+        </div>
+
+    </div>
+    <script> 
+        
+        function showdays(day,color){
+            document.getElementById('screen').style.backgroundColor = color;
+            document.getElementById("display").innerHTML = day;
+           
+        }
+    </script>
+    
+</body>
+</html>

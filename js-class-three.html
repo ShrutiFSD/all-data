@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .main-container {
+            width: 350px;
+            background-color: lightblue;
+            border-radius: 10px;
+            margin-top: 40px;
+            padding: 20px;
+
+        }
+
+        .display {
+            background-color: antiquewhite;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            min-height: 50px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .submit-button {
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: white;
+
+        }
+
+        .submit-button:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="display" id="display"></div>
+
+        <input type="text" id="input-one" placeholder="Enter number 1">
+        <input type="text" id="input-two" placeholder="Enter number 2">
+
+        <div class="button-group">
+            <button class="submit-button" onclick="addition()">Add</button>
+            <button class="submit-button" onclick="subtraction()">Subtract</button>
+            <button class="submit-button" onclick="multiplication()">Multiply</button>
+            <button class="submit-button" onclick="division()">Divide</button>
+        </div>
+    </div>
+
+    <script>
+            function addition() {
+            let num1 = Number(document.getElementById("input-one").value);
+            let num2 = Number(document.getElementById("input-two").value);
+            let add = num1 + num2;
+            document.getElementById("display").innerHTML = add;
+
+        }
+        function subtraction() {
+            let num1 = Number(document.getElementById("input-one").value);
+            let num2 = Number(document.getElementById("input-two").value);
+            let sub = num1 - num2;
+            document.getElementById("display").innerHTML = sub;
+
+        }
+        function multiplication() {
+            let num1 = Number(document.getElementById("input-one").value);
+            let num2 = Number(document.getElementById("input-two").value);
+            let product = num1 * num2;
+            document.getElementById("display").innerHTML = product;
+
+        }
+        function division() {
+            let num1 = Number(document.getElementById("input-one").value);
+            let num2 = Number(document.getElementById("input-two").value);
+            let divide = num1 / num2;
+            document.getElementById("display").innerHTML = divide;
+        }
+
+
+      
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        
+        
+        .main-container {
+            height: 100%;
+            width: 100vw;
+        }
+
+        .main-heading {
+            text-align: center;
+            color: black;
+        }
+
+        /* c container */
+        .c-container {
+            height: 50vh;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: lightgray;
+        }
+
+        .c-container-one {
+            border-style: solid;
+            padding: 10px;
+        }
+
+        .c-container-two {
+            border-style: solid;
+            padding: 10px;
+        }
+
+        .heading-two {
+            font-size: 25px;
+            text-align: center;
+            color: rgb(28, 140, 214);
+        }
+
+        /* java container */
+        .java-container {
+            height: 50vh;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: lightgray;
+        }
+
+        .java-container-one {
+            border-style: solid;
+            padding: 10px;
+        }
+
+        .java-container-two {
+            border-style: solid;
+            padding: 10px;
+        }
+
+        /* python container */
+        .python-container {
+            height: 50vh;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: lightgray;
+
+        }
+
+        .python-container-one {
+            border-style: solid;
+            padding: 10px;
+        }
+
+        .python-container-two {
+            border-style: solid;
+            padding: 10px;
+        }
+
+        /* java-script*/
+        .java-script-container {
+            height: 50vh;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: lightgray;
+
+        }
+
+        .java-script-container-one {
+            border-style: solid;
+            padding: 10px;
+        }
+
+        .java-script-container-two {
+            border-style: solid;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <h1 class="main-heading">I/O in different languages</h1>
+        <hr>
+        <br>
+        <div class="heading-two">I/O in C Language</div>
+        <br>
+        <div class="c-container">
+            <div class="c-container-one">Code
+                <hr>
+                <pre>
+                    #include <stdio.h>
+
+                        int main() {
+                            char name[100];
+                            printf("Enter your name: ");
+                            scanf("%s", name);
+                            printf("Hello, %s!\n", name);
+                            return 0;
+                        }
+                        
+                        </pre>
+            </div>
+            <div class="c-container-two">Output
+                <hr>
+                <code>
+                    <pre>
+                        Enter your name: Alice
+                        Hello, Alice!
+
+                    </pre>
+                </code>
+
+            </div>
+        </div>
+        <br>
+        <div class="heading-two">I/O in Java</div>
+        <br>
+        <div class="java-container">
+            <div class="java-container-one">Code
+                <hr>
+
+                <pre>
+                     <code>
+                        import java.util.Scanner;
+
+                        public class Main {
+                            public static void main(String[] args) {
+                                Scanner scanner = new Scanner(System.in);
+                                System.out.print("Enter your name: ");
+                                String name = scanner.nextLine();
+                                System.out.println("Hello, " + name + "!");
+                                scanner.close();
+                            }
+                        }
+                        
+                            
+                             </code>
+                             </pre>
+
+            </div>
+            <div class="java-container-two">Output
+                <hr>
+                <code>
+                    <pre>
+                        Enter your name: Alice
+                        Hello, Alice!
+
+                    </pre>
+                </code>
+
+            </div>
+        </div>
+        <br>
+            <div class="heading-two">I/O in python</div>
+            <br>
+            <div class="python-container">
+                <div class="python-container-one">Code
+                    <hr>
+
+                    <pre>
+                        name = input("Enter your name: ")
+                        print(f"Hello, {name}!")
+                        
+                    </code>
+                </pre>
+                </div>
+                
+                <div class="python-container-two">Output
+                    <hr>
+                    <code>
+                        <pre>
+                            Enter your name: Alice
+                            Hello, Alice!
+
+                        </pre>
+                    </code>
+                </div>
+            </div>
+            <br>
+                <div class="heading-two">I/O in Java-script</div>
+                <br>
+                <div class="java-script-container">
+                    <div class="java-script-container-one">Code
+                        <hr>
+
+                        <pre>
+                    <code>
+                 
+
+    let name = prompt("Enter your name:");
+    alert("Hello, " + name + "!");
+
+
+                            </code>
+                            </pre>
+
+                    </div>
+                    <div class="java-script-container-two">Output
+                        <hr>
+                        <code>
+                            <pre>
+                                When the page loads:
+
+                                A popup prompt will appear saying:
+                                Enter your name:
+                                
+                                After entering Alice:
+                                
+                                A popup alert will show:
+                                Hello, Alice!
+
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

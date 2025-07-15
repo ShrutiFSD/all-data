@@ -1,11 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js class two</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+        .main-container {
+            width: 25%;
+            height: 50%;
+            background-color: lightblue;
+            border-radius: 10px;
+            margin-left: 35%;
+            margin-top: 20px;
+            padding-top: 15px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        .display{
+            width: 80%;
+            height: 50%;
+            background-color: antiquewhite;
+            margin-left: 10%;
+            margin-top: 5px;
+            padding-top: 10%;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+        .text{
+            margin-left: 50px;
+            font-size: 30px;
+            color: #000;
+        }
+        input{
+            width: 79%;
+            height: 40%;
+            margin-top: 30px;
+            margin-left: 45px;
+            border-radius: 5px;
+            font-size: 30px;
+        }
+        .submit-btn{
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 10%;
+           font-size: 25px;
+           margin-left: 45px;
+           text-align: center;
+           border-radius: 3px;
+        }
+        .submit-button:hover{
+            background-color: green;
+        }
+        .button-group{
+            width: 80%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap: 20px;
+        }
+        .btn{
+            height: 80px;
+        }
+    </style>
 </head>
+
 <body>
-    
-    
+
+    <div class="main-container">
+        <div class="display">
+            <span id="display"></span>
+        </div>
+        <input type="text" id="input-one" placeholder="Enter a number 1">
+        <input type="text" id="input-two" placeholder="Enter a number 2">
+
+        <button class="submit-button">submit</button>
+    </div>
+
+    <div class="button-group">
+        <button class="btn" onclick="displaysunday()" id="sunday">sunday</button>
+        <button class="btn" onclick="displaymonday()" id="monday">monday</button>
+        <button class="btn" onclick="displaytuesday()" id="tuesday">tuesday</button>
+        <button class="btn" onclick="displaywednesday()" id="wednesday">wednesday</button>
+        <button class="btn" onclick="displaythursday()" id="thursday">thursday</button>
+        <button class="btn" onclick="displayfriday()" id="friday">friday</button>
+        <button class="btn" onclick="displaysaturday()" id="saturday">saturday</button>
+
+
+
+    </div>
+    <script>
+        function displaysunday(){
+            document.getElementById("display").innerHTML = "Today is sunday";
+            document.getElementById("sunday").style.backgroundColor ="green";
+
+        }
+        function displaymonday(){
+            document.getElementById("display").innerHTML = "Today is monday";
+            document.getElementById("monday").style.backgroundColor ="green";
+
+        }
+        function displaytuesday(){
+            document.getElementById("display").innerHTML = "Today is tuesday";
+            document.getElementById("tuesday").style.backgroundColor ="green";
+
+        }
+        function displaywednesday(){
+            document.getElementById("display").innerHTML = "Today is wednesday";
+            document.getElementById("wednesday").style.backgroundColor ="green";
+
+        }
+        function displaythursday(){
+            document.getElementById("display").innerHTML = "Today is thursday";
+            document.getElementById("thursday").style.backgroundColor ="green";
+
+        }
+        function displayfriday(){
+            document.getElementById("display").innerHTML = "Today is friday";
+            document.getElementById("friday").style.backgroundColor ="green";
+
+        }
+        function displaysaturday(){
+            document.getElementById("display").innerHTML = "Today is saturday";
+            document.getElementById("saturday").style.backgroundColor ="green";
+
+        }
+    </script>
+
 </body>
+
 </html>
