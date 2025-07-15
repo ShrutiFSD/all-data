@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+        }
+        .grid-container{
+            height: 100%;
+            width: 100%;
+            background-color: lightblue;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 15px;
+            margin-top: 10px;
+           
+        }
+        .box-one{
+            height: 80px;
+            width: 100%;
+            background-color:rgb(78, 91, 144) ;
+            grid-column: 1 / span 5;
+            
+        }
+        span{
+            font-size: 30px;
+            color: white;
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        
+        .box-two{
+            height: 580px;
+            width: 100%;
+            background-color:rgb(78, 91, 144) ;
+            grid-row: 2 / span 2;
+            border-radius: 10px;
+        }
+        .board{
+            font-size: 18px;
+            margin-top: 15px;
+            color: black;
+        }
+        .box-three{
+            height: 250px;
+            width: 100%;
+            background-color: white;
+           border-radius: 10px;
+        }
+    
+        .box-four{
+            height: 250px;
+            width: 100%;
+            background-color:white ;
+            border-radius: 10px;
+            
+        }
+        .box-five{
+            height: 250px;
+            width: 100%;
+            background-color:white ;
+            border-radius: 10px;
+        }
+        
+        .box-six{
+            height: 580px;
+            width: 100%;
+            background-color:lightslategray ;
+            border-radius: 10px;
+            
+        }
+        .box-seven{
+            height: 50px;
+            width: 100%;
+            background-color:rgb(148, 141, 141) ;
+            grid-column:1 / span 5 ;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+       
+          
+        
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="box-one">
+            <span>My Dashboard</span>
+        </div>
+         <div class="box-two">
+            <br><br>
+            <span class="board">🏠Dashboard</span><br><br>
+
+            <span class="board">📊Analytics</span><br><br>
+            <span class="board">🛠️Setting</span><br><br>
+            <span class="board">📁Files</span><br><br>
+            <span class="board">🚪Logout</span><br><br>
+        
+    </div>
+         <div class="box-three">
+           <span class="board">📈Sales report</span> </div>
+         <div class="box-four"> 
+            <span class="board">📅Schedule</span>
+         </div>
+         <div class="box-five">
+            <span class="board">💬Message</span></div>
+            
+         <div class="box-six">
+            <span class="board">Notification</span><br><br>
+         </div>
+         <div class="box-seven">@2025 Admin Panel</div>
+         
+    </div>
+    
+</body>
+</html>

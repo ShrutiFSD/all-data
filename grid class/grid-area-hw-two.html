@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid area</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0%;
+            padding: 0%;
+
+        }
+        .grid-container{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-areas:
+            "header header header header"
+            "aside main main main"
+            "section section section section"
+            "span article article footer"
+             ;
+        }
+        header{
+            grid-area:header;
+            width: 100%;
+            height: 100%;
+            background-color:palevioletred ;
+        }
+        main{
+            grid-area: main;
+            width: 100%;
+            height: 100%;
+            background-color:green ;
+        }
+        aside{
+            grid-area:aside ;
+            width: 100%;
+            height: 100%;
+            background-color:yellow ;
+        }
+        section{
+            grid-area: section;
+            width: 100%;
+            height: 100%;
+            background-color:blue ;
+        }
+        span{
+            grid-area: span;
+            width: 100%;
+            height: 100%;
+            background-color:red ;
+        }
+        article{
+            grid-area: article;
+            width: 100%;
+            height: 100%;
+            background-color:orangered ;
+        }
+        footer{
+            grid-area:footer ;
+            width: 100%;
+            height: 100%;
+            background-color:brown ;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header></header>
+        <main></main>
+        <aside></aside>
+        <section></section>
+        <span></span>
+        <article></article>
+        <footer></footer>
+
+    </div>
+    
+</body>
+</html>

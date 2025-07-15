@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="display"></p>
+    <script>
+        // let str = "";
+        // do{
+        // str = prompt("Enter a String: ");
+        // if(str == "Shruti"){
+        //     console.log("String match!");
+        //     alert("String match!");
+        //     break;
+        // }
+        // else{
+        //     console.log("String not match!")
+        // }
+        // } while(true);
+
+
+        let total = 0;
+        let sum = 0;
+        let count = 5;
+        do{
+            let num = Number(prompt("Enter a number:" + (total + 1) + ":"));
+            sum += num;
+            total++;
+        } while (total < count); 
+
+        let average = sum / count;
+        console.log("The average is" + average);
+        document.getElementById("display").innerHTML = average;
+        alert(total + "average: " + average);
+    </script>
+    
+</body>
+</html>

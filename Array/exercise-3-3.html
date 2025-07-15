@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            padding: 6px;
+            font-size: 25px;
+            background-color: gray;
+            border-radius: 10px;
+        }
+
+        .day {
+            width: 30%;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            font-size: 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .monday { background-color: lightgreen; border-color: darkgreen; }
+        .tuesday { background-color: palevioletred; border-color: purple; }
+        .wednesday, .thursday, .friday, .saturday, .sunday {
+            background-color: lightgreen; border-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <button onclick="getDays()">Get Day</button>
+    </div>
+
+    <script>
+        const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        function getDays() {
+            let inputDay = Number(prompt("Enter day number (0-6):"));
+            if (inputDay >= 0 && inputDay <= 6) {
+                const dayName = weekDays[inputDay];
+                const dayClass = dayName.toLowerCase();
+
+                document.getElementById("container").innerHTML = `
+                    <button onclick="getDays()">Get Day</button>
+                    <div class="day ${dayClass}">
+                        <p>Today is: ${dayName}</p>
+                    </div>`;
+            } else {
+                alert("Please enter a valid number between 0 and 6.");
+            }
+        }
+    </script>
+</body>
+</html>

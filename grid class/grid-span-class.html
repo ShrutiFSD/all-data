@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0%;
+            padding: 0;
+        }
+        .grid-container{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        .box-one{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 174, 0);
+            grid-column: 1/span 2;
+        }
+        .box-two{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(156, 44, 44);
+        }
+        .box-three{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(43, 123, 43);
+        }
+        .box-four{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(16, 170, 221);
+            grid-column:2/span 2 ;
+        }
+        .box-five{
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+            grid-column:1/span 3 ;
+        }
+        .box-six{
+            width: 100%;
+            height: 100%;
+            background-color: lightseagreen;
+            grid-area: 1/span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="box-one"></div>
+        <div class="box-two"></div>
+         <div class="box-three"></div>
+         <div class="box-four"></div>
+         <div class="box-five"></div>
+         <div class="box-six"></div>
+
+
+
+    </div>
+    
+</body>
+</html>

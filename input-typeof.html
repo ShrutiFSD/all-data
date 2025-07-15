@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        .main-container{
+            height: 60%;
+            width: 30%;
+            background-color: white;
+            border-style: solid;
+            border-color: black;
+            border-radius: 4px;
+            margin-left: 30%;
+            text-align: center;
+
+        }
+        button{
+            background-color: green;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Data Type Detector</h1>
+        <label for=""> Enter Anything</label><br>
+        <input type="text" type="number" ><br><br>
+        <button onclick="checkdataType()">check data type</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        function checkdataType(){
+            let input = 33
+            let type = typeof number
+            document.getElementById('result').innerHTML
+
+
+        }
+    </script>
+</body>
+</html>

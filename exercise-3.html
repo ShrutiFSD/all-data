@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---->
+    <title>exercise 3</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .main-container{
+            width: 100%;
+            height: 100%;
+            background-color: lightcoral;
+        }
+        .dispaly-box{
+            width: 100%;
+            height: 50%;
+            background-color: lightseagreen;
+            display: grid;
+            text-align: center;
+            border-radius: 6px;
+            border-style: solid;
+        }
+        span{
+            font-size: 50px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+           
+            text-align: center;
+
+        }
+        p{
+            font-size: 50px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+
+        }
+        .btn-group{
+            width: 100%;
+           
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap: 15px;
+            margin-top: 20px;
+           
+        }
+        .btn{
+            height: 100px;
+            background-color: lightblue;
+            font-size: 40px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<!--changing the color after clicking the button-->
+<div class="main-container" id="main-container">
+    <p>Welcome to Universal Calender </p>
+    <p id="display"></p>
+    <div class="display-box" id=" display-box">
+       
+        
+    
+    <div class="btn-group">
+        <button class="btn" onclick="displaySunday()" id="sunday">Sunday</button>
+        <button class="btn" onclick="displayMonday()" id="monday">Monday</button>
+        <button class="btn" onclick="displayTuesday()" id="tuesday">Tuesday</button>
+        <button class="btn" onclick="displayWednesday()" id="wednesday">Wednesday</button>
+        <button class="btn" onclick="displayThursday()" id="thursday">Thursday</button>
+        <button class="btn" onclick="displayFriday()" id="friday">Friday</button>
+        <button class="btn" onclick="displaySaturday()" id="saturday">Saturday</button>
+    </div>
+    </div>
+</div>
+<script>
+    //function for sunday button
+    function displaySunday(){
+        document.getElementById("display").innerHTML ="Today is Sunday";
+        document.getElementById("main-container").style.backgroundColor="lightblue";
+        document.getElementById("display-box").style.backgroundColor="yellow";
+        document.getElementById("sunday").style.backgroundColor="blue";
+    }
+
+        //function for monday button
+    function displayMonday(){
+        document.getElementById("display").innerHTML ="Today is Monday";
+        document.getElementById("main-container").style.backgroundColor="green";
+        document.getElementById("display-box").style.backgroundColor="yellow";
+        document.getElementById("monday").style.backgroundColor="blue";
+        
+        
+    }
+         //function for monday button
+         function displayTuesday(){
+        document.getElementById("display").innerHTML ="Today is Tuesday";
+        document.getElementById("main-container").style.backgroundColor="yellow";
+        document.getElementById("display-box").style.backgroundColor="yellow";
+        document.getElementById("tuesday").style.backgroundColor="blue";
+        
+        
+    }
+         //function for monday button
+         function displayWednesday(){
+        document.getElementById("display").innerHTML ="Today is Wednesday";
+        document.getElementById("main-container").style.backgroundColor="blue";
+        document.getElementById("display-box").style.backgroundColor="yellow";
+        document.getElementById("wednesday").style.backgroundColor="blue";
+        
+        
+    }
+        
+
+         //function for monday button
+         function displayWednesday(){
+        document.getElementById("display").innerHTML ="Today is Thursday";
+        document.getElementById("main-container").style.backgroundColor="pink";
+        document.getElementById("display-box").style.backgroundColor="yellow";
+        document.getElementById("thursday").style.backgroundColor="blue";
+        
+        
+    }
+         //function for monday button
+         function displayFriday(){
+        document.getElementById("display").innerHTML ="Today is Friday";
+        document.getElementById("main-container").style.backgroundColor="grey";
+        document.getElementById("display-box").style.backgroundColor="yellow";
+        document.getElementById("friday").style.backgroundColor="blue";
+        
+        
+    }
+         //function for monday button
+         function displaySaturday(){
+        document.getElementById("display").innerHTML ="Today is Saturday";
+        document.getElementById("main-container").style.backgroundColor="orange";
+        document.getElementById("display-box").style.backgroundColor="yellow";
+        document.getElementById("saturday").style.backgroundColor="blue";
+        
+        
+    }
+</script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> EX on ladder if else </title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            height: 40%;
+            width: 25%;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 25px;
+            border-color: black;
+            border-style: solid;
+        
+
+        }
+        .input{
+            width: 80%;
+            height: 20% ;
+            font-size: 20px;
+        }
+        button{
+            width: 80%;
+            height: 15%;
+            background-color: green;
+            font-size: 25px;
+            color: white;
+        }
+        #result{
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <input type="text" name="" id="name" placeholder="Enter your name">
+        <input type="number" name="" id="input" placeholder="Enter your marks">
+        <button onclick="marksToGrade()">Convert marks to grade</button>
+        <p id="result">display</p>
+    </div>
+    <script>
+       function marksToGrade(){
+        let name = document.getElementById('name').value;
+        let marks = document.getElementById('input').value;
+        let display = document.getElementById("result").innerHTML;
+
+        if(marks >= 80){
+            grade = "A grade";
+            document.getElementById('container').style.backgroundColor = "green";
+        }
+        else if (marks >= 65){
+            grade = "B grade";
+        }
+        else if (marks >= 50){
+            grade = "C grade";
+        }
+        else if (marks >= 35){
+            grade = "D grade";
+        }
+        else{
+            grade = "fail";
+        }
+        document.getElementById("result").innerHTML = " Name is "  + name + " and grade is " + grade;
+
+       }
+    </script>
+    
+</body>
+</html>

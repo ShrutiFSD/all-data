@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        .container{
+            height: 45%;
+            width: 50%;
+            background-color: lightslategray;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Java Script Fan Check</h1>
+        <input type="radio" id="js-fan" name="fan" value="true">
+        <label for="js-fan">I am a Java script fan</label>
+        <input type="radio" id="not-js-fan" name="fan" value="true">
+        <label for="not-js-fan">I am not a Java script fan</label><br><br>
+        <button onclick="fanCheck()">Check</button>
+        <p id="result"> Waiting For Your Response..</p>
+    </div>
+    <script>
+    function fanCheck(){
+        value = document.getElementById("js-fan").checked;
+         value = document.getElementById("not-js-fan").checked;
+
+        
+        document.getElementById("result").value
+    }
+       
+    </script>
+</body>
+</html>

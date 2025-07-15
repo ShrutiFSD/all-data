@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="display"></p>
+    
+    <script>
+        // 5 = 5 x 4 x 3 x 2 x 1
+
+       // function factorial(number){
+        //    if (number === 0 ){
+            //    return 1 ;
+         //   }
+         //   else{
+           //     return number * factorial (number - 1);
+         //   }
+       // }
+       // let output = factorial(5);
+      //  console.log(output);
+      //  document.getElementById("display").innerHTML = output;
+      //-------------
+
+     // function decrementNumber(number){
+       // if (number <= 0){
+        //    console.log("end");
+        //}
+        //else{
+          //  document.getElementById("display").innerHTML += number;
+            //console.log(number);
+            //decrementNumber(number - 1);
+       // }
+       // return 0 ;
+    //  }
+    //  let output2 = decrementNumber(10);
+     // console.log(output2);
+
+     //----------------
+
+      // function for increament number
+
+
+      function increamentNumber(start,end){
+        if (start <= end){
+            document.getElementById("display").innerHTML += start + ",";
+            console.log(start);
+            increamentNumber(start + 1, end);
+
+
+        }
+        else{
+            console.log("end");
+        }
+        return 0 ;
+      }
+        let output = increamentNumber(999 , 1000);
+        console.log(output);
+
+    </script>
+</body>
+</html>

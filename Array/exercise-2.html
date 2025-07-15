@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      .main-conatainer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .form-container {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aqua;
+      }
+      h3 {
+        font-size: 30px;
+      }
+      input {
+        width: 20%;
+        padding: 6px;
+      }
+      button {
+        width: 10%;
+        padding: 6px;
+        font-size: 20px;
+        background-color: lightgreen;
+        border-color: darkgreen;
+      }
+      .bill-container {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lightcoral;
+      }
+      .form{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="form-container"></div>
+      <h3>Input Data</h3>
+      <div>
+        <input type="text" id="product-name" placeholder="Product-name" />
+        <input type="number" id="product-price" placeholder="Product-price" />
+        <input
+          type="number"
+          id="product-quantity"
+          placeholder="Product-Quantity"
+        />
+        <button onclick="addBill()">Add</button>
+    </div>
+      <div class="bill-container"></div>
+      <table>
+      <caption>
+        <h1>Bill</h1>
+      </caption>
+      <tr class="table-heading">
+        <th>product name</th>
+        <th>product price</th>
+        <th>product quantity</th>
+        <th>Total</th>
+      </tr>
+     <table id="table-bill"></table>
+    </table>
+    </div>
+    <script>
+      let billArray = [];
+
+      function addBill() {
+        let productName = document.getElementById("product-name").value;
+        let productPrice = Number(document.getElementById("product-price").value);
+        let productQuantity = Number(document.getElementById("product-quantity").value);
+
+        billArray.push({
+          product_name: productName,
+          product_price: productPrice,
+          product_quantity:productQuantity,
+        });
+        document.getElementById("product-name").value ="";
+        document.getElementById("product-price").value ="";
+        document.getElementById("product-quantity").value ="";
+        showBill();
+      }
+      function showBill(){
+        for (let i = 0; i < billArray.length; i++){
+            document.getElementById("table-bill").innerHTML +=`
+            <tr class="table-data">
+                <td>${billArray[i].product_name}</td>
+                 <td>${billArray[i].product_price}</td>
+                  <td>${billArray[i].product_quantity}</td>
+                   <td>${billArray[i].product_price * billArray[i].product_quantity}</td>
+                   </tr>
+                   `
+            // document.getElementById("show-product-name").innerHTML = billArray[i].product_name;
+            // document.getElementById("show-product-price").innerHTML = billArray[i].product_price;
+            // document.getElementById("show-product-quantity").innerHTML = billArray[i].product_quantity;
+            // document.getElementById("total").innerHTML = billArray[i].product_price * billArray[i].product_quantity;
+        }
+
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+body{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+.main-container{
+  
+    width: 100%;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    gap: 20px;
+}
+.container-1{
+    width: 95%;
+    height: 300px;
+    background-color: rgb(150, 114, 146);
+    
+}
+.content-one-one{
+    width: 100%;
+    height: 40%;
+    background-color: rgb(168, 168, 212);
+    display: flex;
+    gap: 20px;
+ 
+}
+ .content-one-two{
+    width: 100%;
+    height: 60%;
+    background-color: rgb(69, 69, 196);
+
+}
+.container-2{
+    width: 95%;
+    height: 700px;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+.content-one{
+    width: 70%;
+    height: 100%;
+    background-color: rosybrown;
+}
+.content-two{
+    width: 30%;
+    height: 100%;
+    background-color: rgb(194, 81, 47);
+}
+@media (max-width: 480px){
+    .container-1{
+        height: 500px;
+    }
+    .container-2{
+        height:800px ;
+        flex-direction: column;
+    }
+    .content-one{
+        width: 100%;
+        height: 70%;
+
+    }
+    .content-two{
+        width: 100%;
+        height: 30%;
+    }
+
+}
+@media(min-width: 481px) and (max-width: 768px){
+    .container-1{
+        height: 500px;
+    }
+    .container-2{
+        height:800px ;
+        flex-direction: column;
+    }
+    .content-one{
+        width: 100%;
+        height: 70%;
+
+    }
+    .content-two{
+        width: 100%;
+        height: 30%;
+    }
+
+}
+@media(min-width: 769px) and  (max-width: 1024px){
+    .container-1{
+        height: 500px;
+    }
+    .container-2{
+        height:800px ;
+        flex-direction: column;
+    }
+    .content-one{
+        width: 100%;
+        height: 70%;
+
+    }
+    .content-two{
+        width: 100%;
+        height: 30%;
+    }
+
+}
+</style>
+</head>
+<body>
+<div class="main-container">
+<!-- container one -->
+<div class="container-1"></div>
+<!-- container two -->
+<div class="container-2">
+
+    <!-- content 1 -->
+    <div class="content-one">
+        <!-- content-one-one -->
+        <div class="content-one-one">
+            <div class="box-one"></div>
+            <div class="box-two"></div>
+        </div>
+        <!-- content-one-two -->
+        <div class="content-one-two"></div>
+    </div>
+
+    <!-- content 2 -->
+    <div class="content-two"></div>
+</div>
+</div>
+</body>
+</html>

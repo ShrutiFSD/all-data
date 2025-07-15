@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            display: flex;
+           
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        button{
+            padding: 6px;
+            font-size: 25px;
+            background-color: gray;
+            border-radius: 10px;
+        }
+        .day{
+            width: 30%;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: solid;
+            border-width: 2px;
+            font-size: 30px;
+            border-radius: 10px;
+
+
+        }
+        .monday{
+            background-color: lightgreen;
+            border-color: darkgreen;
+        }
+        .tuesday{
+            background-color: palevioletred;
+            border-color: purple;
+        }
+        .wednesday{
+            background-color: lightgreen;
+            border-color: darkgreen;
+        }
+        .thursday{
+            background-color: lightgreen;
+            border-color: darkgreen;
+        }
+        .friday{
+            background-color: lightgreen;
+            border-color: darkgreen;
+        }
+        .saturday{
+            background-color: lightgreen;
+            border-color: darkgreen;
+        }
+        .sunday{
+            background-color: lightgreen;
+            border-color: darkgreen;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <button onclick="getDays()">Get Day</button>
+        </div>
+   
+   
+</div>
+    <script>
+        const weekDays = [ "Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      
+         function getDays(){
+            let inputDay = Number(prompt("Enter day number(0-6): "));
+            if(inputDay >= 0 && inputDay == 6){
+                if(inputDay == 0){
+                document.getElementById("container")
+                .innerHTML = `<button onclick="getDay()"> Get Day </button>
+                <div class="day sunday">
+                    <p> Today is : ${weekDays[inputDay]}<p/>
+                        </div>`;
+                    }else if (inputDay == 1){
+                        document.getElementById("container")
+                        .innerHTML = `<button onclick ="getDay()">Get Day </button>
+                        <div class =" day monday">
+                            <p> Today is : ${weekDays[inputDay]}<p/>
+                        </div>`;
+                        
+
+                    }
+            }
+
+         }
+    </script>
+</body>
+</html>
