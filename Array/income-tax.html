@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tax Calculator</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+ 
+  <h2> Income Tax Calculator</h2>
+  <label for="income">Enter your annual income (₹):</label><br><br>
+  <input type="number" id="income" placeholder="e.g. 1500000"><br><br>
+  <button onclick="calculateTax()">Calculate Tax</button>
+ 
+  <div id="result"></div>
+ 
+  <script>
+    function calculateTax() {
+      let income = parseFloat(document.getElementById("income").value);
+      let tax = 0;
+ 
+      if (income <= 600000) {
+        tax = 0;
+      } else if (income <= 1200000) {
+        tax = (income - 600000) * 0.05;
+      } else if (income <= 2400000) {
+        tax = (600000 * 0.05) + (income - 1200000) * 0.10;
+      } else if (income <= 3000000) {
+        tax = (600000 * 0.05) + (1200000 * 0.10) + (income - 2400000) * 0.20;
+      } else {
+        tax = (600000 * 0.05) + (1200000 * 0.10) + (600000 * 0.20) + (income - 3000000) * 0.30;
+      }
+ 
+      document.getElementById("result").innerHTML =
+        " Total Tax Payable: ₹" + tax.toFixed(2);
+    }
+  </script>
+ 
+</body>
+</html>
+ 

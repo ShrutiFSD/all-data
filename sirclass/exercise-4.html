@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input-one" placeholder="Value One" />
+<input type="text" id="input-two" placeholder="Value Two" />
+<input type="text" id="operation" placeholder="Enter operation (add, sub, mul, div)" />
+<button onclick="performOperation()">Operation</button>
+
+<p id="result"></p>
+
+    <script>
+        function performOperation() {
+  const one = parseFloat(document.getElementById("input-one").value);
+  const two = parseFloat(document.getElementById("input-two").value);
+  const op = document.getElementById("operation").value.toLowerCase();
+  const result = document.getElementById("result");
+
+  if (isNaN(one) || isNaN(two)) {
+    result.innerText = "Please enter valid numbers.";
+    return;
+  }
+
+  let output;
+  switch(op) {
+    case "add":
+      output = one + two;
+      break;
+    case "sub":
+      output = one - two;
+      break;
+    case "mul":
+      output = one * two;
+      break;
+    case "div":
+      if (two === 0) {
+        output = "Cannot divide by zero";
+      } else {
+        output = one / two;
+      }
+      break;
+    default:
+      output = "Invalid operation. Use add, sub, mul, or div.";
+  }
+
+  result.innerText = `Result: ${output}`;
+}
+
+
+    </script>
+</body>
+</html>

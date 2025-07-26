@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        width: 100vh;
+      }
+      .container {
+        height: 50%;
+        width: 40%;
+        background-color: lightblue;
+        text-align: center;
+        margin-left: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>operations</h2>
+      <input type="text" id="input-one" placeholder="enter value" /><br /><br />
+      <input type="text" id="input-two" placeholder="enter value" /><br /><br />
+      <input
+        type="text"
+        id="input-three"
+        placeholder="add sub mul div"
+      /><br /><br />
+      <button onclick="operationS()">Operation</button>
+      <p id="output"></p>
+    </div>
+    <script>
+      function addNum() {
+        const inputOne = document.getElementById("input-one").value;
+        const inputTwo = document.getElementById("input-two").value;
+        let result = parseInt(inputOne) + parseInt(inputTwo);
+        document.getElementById("output").innerHTML = result;
+        console.log(result);
+      }
+      function subNum() {
+        const inputOne = document.getElementById("input-one").value;
+        const inputTwo = document.getElementById("input-two").value;
+        let result = parseInt(inputOne) - parseInt(inputTwo);
+        document.getElementById("output").innerHTML = result;
+      }
+      function multiNum() {
+        const inputOne = document.getElementById("input-one").value;
+        const inputTwo = document.getElementById("input-two").value;
+        let result = parseInt(inputOne) * parseInt(inputTwo);
+        document.getElementById("output").innerHTML = result;
+      }
+      function divNum() {
+        const inputOne = document.getElementById("input-one").value;
+        const inputTwo = document.getElementById("input-two").value;
+        let result = parseInt(inputOne) / parseInt(inputTwo);
+        document.getElementById("output").innerHTML = result;
+      }
+      function operationS() {
+        let x = document.getElementById("input-three").value;
+        if (inputone === "" || inputtwo === "") {
+          alert("Please enter both values.");
+          return null;
+        }
+
+        if (isNaN(inputone) || isNaN(inputtwo)) {
+          alert("Please enter valid numbers.");
+          return null;
+        }
+        alert(x);
+        if (x == "add") {
+          addNum();
+        } else if (x == "sub") {
+          subNum();
+        } else if (x == "multi") {
+          multiNum();
+        } else if (x == "div") {
+          divNum();
+        } else {
+          alert("Invalid Operation");
+        }
+      }
+    </script>
+  </body>
+</html>

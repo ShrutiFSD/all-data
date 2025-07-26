@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fruits</h1>
+    <input type="text" id="key" placeholder="Enter Fruit">
+    <input type="number" id="value" placeholder="Enter value">
+    <script>
+        let dataArray = [];
+        function clear(){
+
+
+        }
+        function put(){
+            let key = document.getElementById('key').value.trim();
+            let value = document.getElementById('value').value.trim();
+
+            if (key && value){
+                let fruit = { key, value: Number(value)};
+                dataArray.push(fruit);
+                document.getElementById('output').innerHTML = `Added: ${JSON.stringify(fruit)}`;
+                
+            }
+        }
+    </script>
+</body>
+</html>
