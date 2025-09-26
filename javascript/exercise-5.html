@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let evencount = 0;
+      //   let oddcount = 0;
+      //   let array = [];
+      //   for (let i = 1; i <= 10; i++) {
+      //     let input = Number(prompt("Enter a number:"));
+      //     array.push(input);
+      //   }
+      //   console.log(array);
+
+      //   for (let j = 0; j <= array - length - 1; j++) {
+      //     if (array[j] % 2 == 0) {
+      //       evencount++;
+      //     }
+      //   }
+      //   console.log(evencount)
+
+      let array = [1, 2, 3, 4, 1, 5, 4, 3, 2];
+      let visited = [];
+
+      for (let r of array) {
+        if (!visited.includes(r)) {
+          let count = 0;
+          for (let i of array) {
+            if (r == i) {
+              count++;
+            }
+          }
+          console.log(r, "appears", count, "times");
+          visited.push(r);
+        }
+        newAr = []
+        let y = true
+        for (let j of newAr){
+            if(r == j){
+                y = false
+                break;
+               
+            }
+        }
+        if(y){
+            newAr.push(r)
+        }
+      }
+      console.log(newAr) 
+      
+      
+    </script>
+  </body>
+</html>
+
+
+

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Dictionary</title>
+  </head>
+  <body>
+    <script>
+      let newData2 = [
+        {
+          name: "Shah Rukh Khan",
+          image:
+            "https://media.voguearabia.com/photos/6819d1d8ab0eb8b684f6d5dd/2:3/w_2560%2Cc_limit/GettyImages-2213…",
+          movies: [
+            {
+              name: "Dilwale Dulhania Le Jayenge",
+              Release_date: "1995",
+              IMDB_Rating: 8.0,
+              Image:
+                "https://m.media-amazon.com/images/M/MV5BNDYzNDczNzE0MV5BMl5BanBnXkFtZTcwMzMzODc0MQ@@._V1_.jpg",
+            },
+            {
+              name: "My Name Is Khan",
+              Release_date: "2010",
+              IMDB_Rating: 8.0,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/5/5d/My_Name_Is_Khan_film_poster.jpg",
+            },
+            {
+              name: "Chak De! India",
+              Release_date: "2007",
+              IMDB_Rating: 8.1,
+              Image:
+                "https://m.media-amazon.com/images/M/MV5BMjYyOTdmYTYtYjQ4Ni00ZmFiLWJlZjYtZmJkNDI5MmNlNjMyXkEyXkFqcGc…",
+            },
+            {
+              name: "Om Shanti Om",
+              Release_date: "2007",
+              IMDB_Rating: 6.8,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/4/41/Om_Shanti_Om.jpg",
+            },
+            {
+              name: "Raees",
+              Release_date: "2017",
+              IMDB_Rating: 6.7,
+              Image:
+                "https://images.jdmagicbox.com/comp/jd_social/news/2018aug08/image-232464-avv07hch4c.jpg",
+            },
+            {
+              name: "Raees2",
+              Release_date: "2017",
+              IMDB_Rating: 6.7,
+              Image:
+                "https://images.jdmagicbox.com/comp/jd_social/news/2018aug08/image-232464-avv07hch4c.jpg",
+            },
+            {
+              name: "Raees3",
+              Release_date: "2017",
+              IMDB_Rating: 6.7,
+              Image:
+                "https://images.jdmagicbox.com/comp/jd_social/news/2018aug08/image-232464-avv07hch4c.jpg",
+            },
+          ],
+        },
+        {
+          name: "Salman Khan",
+          movies: [
+            {
+              name: "Bajrangi Bhaijaan",
+              Release_date: "2015",
+              IMDB_Rating: 8.0,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/0/0b/Bajrangi_Bhaijaan_Poster.jpg",
+            },
+            {
+              name: "Sultan",
+              Release_date: "2016",
+              IMDB_Rating: 7.0,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/0/0d/Sultan_poster.jpg",
+            },
+            {
+              name: "Kick",
+              Release_date: "2014",
+              IMDB_Rating: 5.2,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/e/e3/Kick_poster.jpg",
+            },
+            {
+              name: "Wanted",
+              Release_date: "2009",
+              IMDB_Rating: 6.5,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/a/a2/Wanted_movie.jpg",
+            },
+            {
+              name: "Dabangg",
+              Release_date: "2010",
+              IMDB_Rating: 6.2,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/3/3b/Dabangg_poster.jpg",
+            },
+          ],
+        },
+        {
+          name: "Aamir Khan",
+          movies: [
+            {
+              name: "Rang De Basanti",
+              Release_date: "2006",
+              IMDB_Rating: 8.1,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/9/90/Rang_De_Basanti_poster.jpg",
+            },
+            {
+              name: "Ghajini",
+              Release_date: "2008",
+              IMDB_Rating: 7.1,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/6/69/Ghajini_Poster.jpg",
+            },
+            {
+              name: "Dil Chahta Hai",
+              Release_date: "2001",
+              IMDB_Rating: 8.1,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/2/28/Dil_Chahta_Hai.jpg",
+            },
+            {
+              name: "PK",
+              Release_date: "2014",
+              IMDB_Rating: 8.1,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/9/98/PK_poster.jpg",
+            },
+            {
+              name: "Dangal",
+              Release_date: "2016",
+              IMDB_Rating: 8.4,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/7/7a/Dangal_poster.jpg",
+            },
+          ],
+        },
+        {
+          name: "Hrithik Roshan",
+          movies: [
+            {
+              name: "War",
+              Release_date: "2019",
+              IMDB_Rating: 6.5,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/1/11/War_film_poster.jpg",
+            },
+            {
+              name: "Bang Bang!",
+              Release_date: "2014",
+              IMDB_Rating: 6.2,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/8/8c/Bang_Bang_poster.jpg",
+            },
+            {
+              name: "Kaho Naa... Pyaar Hai",
+              Release_date: "2000",
+              IMDB_Rating: 7.2,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/f/fd/Kaho_Naa..._Pyaar_Hai.jpg",
+            },
+            {
+              name: "Super 30",
+              Release_date: "2019",
+              IMDB_Rating: 7.9,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/e/e3/Super_30_poster.jpg",
+            },
+            {
+              name: "Guzaarish",
+              Release_date: "2010",
+              IMDB_Rating: 7.5,
+              Image:
+                "https://upload.wikimedia.org/wikipedia/en/f/f3/Guzaarish_poster.jpg",
+            },
+          ],
+        },
+      ];
+
+      let year1995 = []
+      let year2000 = []
+      let year2001 = []
+      let year2006 = []
+      let year2007 = []
+      let year2008 = []
+      let year2010 = []
+      let year2014 = []
+      let year2015 = []
+      let year2016 = []
+      let year2017 = []
+      let year2019 = []
+
+
+
+// for(let a of newData2){
+//     let moviesArray = a.movies;
+//     for(let b of moviesArray){
+//         if(Number(b.Release_date)==1995){
+//             year1995.push(b.name || b.Name); 
+//         }
+//     }
+// }
+// console.log(year1995); 
+
+
+ 
+
+// let letter = prompt("Enter a letter:");  
+
+// for (let a of newData2) {
+//     let name = a.name;
+//     if (name[0].toUpperCase() === letter.toUpperCase()) {
+//         // console.log(name);
+//     }
+// }
+
+
+
+
+// let allMovies = [];
+
+// // collect all movies (handling name/Name issue)
+// for (let a of newData2) {
+//   for (let movie of a.movies) {
+//     let movieName = movie.name ;
+//     allMovies.push(movieName);
+//   }
+// }
+
+// // bubble sort
+// for (let i = 0; i < allMovies.length; i++) {
+//   for (let j = 0; j < allMovies.length - i - 1; j++) {
+//     if (allMovies[j].toLowerCase() > allMovies[j + 1].toLowerCase()) {
+//       // swap
+//       let temp = allMovies[j];
+//       allMovies[j] = allMovies[j + 1];
+//       allMovies[j + 1] = temp;
+//     }
+//   }
+// }
+
+// console.log("Movies in alphabetical order (without sort):");
+// console.log(allMovies);
+
+for(let a of newData2){
+  let moviesArray = a.movies
+  for(let b of moviesArray){
+    for(let i = 0; i < moviesArray.length-1;i++){
+      let x = moviesArray[i]
+      let y = moviesArray[i + 1]
+      if(x.name > y.name){
+        moviesArray[i] = y
+        moviesArray[i + 1]= x
+      }
+    }
+  }
+}
+
+// console.log(newData2)
+
+for(let a of newData2){
+  let name = a.name
+  for(let b of name){
+    for(let i = 0; i < name.length-1;i++){
+      let x = name[i]
+      let y = name[i + 1]
+      if(x.name > y.name){
+        name[i] = y
+        name[i + 1]= x
+      }
+    }
+  }
+}
+// console.log(newData2)
+
+for( let a of newData2){
+ let moviesArray = a.movies;
+for(let b of moviesArray){
+  for(let i = 0; i < moviesArray.length - 1; i++){
+    let x = moviesArray[i]
+    let y = moviesArray[i + 1];
+
+    if(x.name > y.name){
+      moviesArray[i] = y
+      moviesArray[i + 1] = x
+    }
+  }
+}
+}
+// console.log(newData2)
+
+for(let a of newData2){
+  let actorsname = a.name;
+  for(let b of actorsname){
+    for(let i = 0; i < actorsname.length-1; i++){
+      for (let j = 0; j < newData2.length - i - 1; j++) {
+      let x = actorsname[i]
+      let y = actorsname[i + 1];
+
+      if(x.name > y.name){
+        moviesArray[i] = y
+        moviesArray[i + 1] = x
+      }
+    }
+    }
+  }
+}
+ console.log(newData2)
+
+
+// for (let i = 0; i < newData2.length - 1; i++) {
+//   for (let j = 0; j < newData2.length - i - 1; j++) {
+//     let x = newData2[j];
+//     let y = newData2[j + 1];
+
+//     if (x.name.toLowerCase() > y.name.toLowerCase()) {
+    
+//       newData2[j] = y;
+//       newData2[j + 1] = x;
+//     }
+//   }
+// }
+
+// console.log("Actors in alphabetical order:");
+// for (let a of newData2) {
+//   console.log(a.name);
+// }
+
+
+
+                                                        
+
+
+    </script>
+  </body>
+</html>

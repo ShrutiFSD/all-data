@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2D Array</title>
+  </head>
+  <body>
+    <script>
+      // const array = [
+      //     [1,2,3],
+      //     [2,3,4],
+      //     [5,6,7]
+      // ];
+      // for(let a = 0;a < array.length;a++){
+      //     let arr = array[a];
+      //     for(let i = 0 ; i < arr.length; i++){
+      //         console.log(array[a][i]);
+      //     }
+      // }
+      // console.log(array[2][2]);
+
+
+
+
+      // find how many even and odd are thir in the array
+      // given array
+    //   const array = [
+    //     [1, 2, 3],
+    //     [2, 3, 4],
+    //     [5, 6, 7],
+    //   ];
+
+    //   let evenArray = [];
+    //   let oddArray = [];
+
+    //   for (let a of array) {
+    //     for (let i of a) {
+    //       if (i % 2 == 0) {
+    //         evenArray.push(i);
+    //       } else {
+    //         oddArray.push(i);
+    //       }
+    //     }
+    //   }
+    //   console.log(evenArray);
+    //   console.log(oddArray);
+
+
+
+
+
+    array = []
+
+    for (let a = 0 ; a <=3; a++){
+        array.push([])
+        
+     
+        // for(let i = 0; i <= 3; i++){
+           
+            if(array.length % 2 == 0){
+                for (let a = 0; a<= 3; a++){
+                    let input = prompt()
+                    array[a].push(input)
+                }
+            }
+            else{
+                for(let odd = 0; odd<=3; odd++){   
+                    array[a].push(1)
+                }
+            }
+         
+        }
+    // }
+    console.log(array)
+
+   
+
+
+
+
+      
+    </script>
+  </body>
+</html>

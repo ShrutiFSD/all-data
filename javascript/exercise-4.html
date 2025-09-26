@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const list =[
+            {
+                id:1,
+                name:"shruti",
+                mark: 45,
+            },
+            {
+                id:2,
+                name:"ayush",
+                mark:65,
+            },
+            {
+                id:3,
+                name:"shreyash",
+                mark:96,
+            },
+            {
+                id:4,
+                name:"ashish",
+                mark:85,
+            },
+            {
+                id:5,
+                name:"mayank",
+                mark:35,
+            }, 
+        ]
+        // let group = []
+        // for(let i=0;i<list.length-1;i++){
+        //     if(list[i].mark > 50){
+        //         group.push(list[i].marks)
+
+        //         console.log(list)
+        //         // console.log(i)
+        //     }
+
+        // }
+
+        // for(let i = 0; i <= list.length-1;i++){
+        //     if(list[i].id % 2 == 0){
+        //         list[i].name
+
+        //     }
+        //     console.log(list)
+
+        // }
+     
+
+//         let surname = prompt("Enter surname:"); 
+
+// for (let i = 0; i < list.length; i++) {
+//     if (list[i].mark > 50) {
+//         console.log(list[i].name + " " + surname + " - " + list[i].mark);
+//     }
+// }
+
+let i = 0;
+    while (i <= list.length - 1) {
+        let userInput = prompt(`Enter ${list[i].name}'s surname`);
+        list[i].name = list[i].name + " " + userInput; 
+        i++;
+    }
+
+    console.log(list); 
+</script>
+    </script>
+</body>
+</html>                                                        

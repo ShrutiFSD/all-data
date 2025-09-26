@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Array on HTML</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      header {
+        width: 100vw;
+        height: 80px;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        padding-left: 20px;
+      }
+      h1 {
+        margin: 0;
+      }
+      button {
+        width: 200px;
+        height: 70%;
+        font-size: 18px;
+        background-color: rgba(236, 157, 10, 0.818);
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <button onclick="showproduct()">Back</button>
+      <h1 id="product">Product: 0</h1>
+      <button onclick="addproduct()">Add Product +</button>
+      <h1 id="Cart">Cart: 0</h1>
+    </header>
+
+    <ul id="display"></ul>
+
+    <script>
+      // productData array
+      let productData = [
+        { name: "Laptop", price: 50000 },
+        { name: "Phone", price: 20000 },
+      ];
+
+      // cart array
+      let cartArray = [];
+
+      // add product
+      function addproduct() {
+        let productName = prompt("Enter product name:");
+        let productPrice = prompt("Enter product price:");
+        if (productName && productPrice) {
+          productData.push({
+            name: productName,
+            price: productPrice,
+          });
+        }
+        showproductCount();
+        showproduct();
+      }
+
+      // show product count
+      function showproductCount() {
+        document.getElementById(
+          "product"
+        ).innerHTML = `Product: ${productData.length}`;
+      }
+
+      // show products
+      function showproduct() {
+        let display = document.getElementById("display");
+        display.innerHTML = "";
+        productData.map((product, index) => {
+          display.innerHTML += `
+            <li>
+              <b>${product.name}</b> <br>
+              Price: ${product.price} <br>
+              <button onclick="removeProduct(${index})">Remove</button>
+              <button onclick="addtoCart(${index})">Add To Cart</button>
+            </li>`;
+        });
+      }
+
+      // remove product
+      function removeProduct(index) {
+        productData.splice(index, 1);
+        showproductCount();
+        showproduct();
+      }
+
+      // add to cart
+      function addtoCart(index) {
+        cartArray.push(productData[index]);
+        showCartCount();
+      }
+
+      // show cart count
+      function showCartCount() {
+        document.getElementById("Cart").innerHTML = `Cart: ${cartArray.length}`;
+      }
+
+      // initial load
+      showproductCount();
+      showproduct();
+    </script>
+  </body>
+</html>
+
+ 

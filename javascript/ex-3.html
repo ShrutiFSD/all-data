@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Array with UI</title>
+  <style>
+    body{
+      height: 100vh;
+      width: 100vw;
+    }
+    header{
+      width: 100vw;
+      height: 80px;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    button{
+      width: 200px;
+      height: 60%;
+      font-size: 20px;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+    .display{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 20px;
+    }
+    p{
+      font-size: 25px;
+    }
+    .students{
+      margin: 10px;
+      padding: 10px;
+      width: 300px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="count">Count : 0</div>
+    <button id="addBtn">Add +</button>
+    <button id="cartBtn">Cart : 0</button>
+  </header>
+
+  <div class="display" id="display"></div>
+
+  <script>
+    let students = ["pranay","sanchit","himanshu","atharv","ratnesh"];
+    let cart = [];
+
+    function showStudents(){
+      document.getElementById("display").innerHTML = ""; 
+      students.forEach((student, index) => {
+        document.getElementById("display").innerHTML += `
+          <div class="students">
+            <p>${student}</p> 
+            <button onclick="addToCart(${index})">Add</button>
+          </div>`;
+      });
+      document.getElementById("count").innerHTML = `Count : ${students.length}`;
+    }
+
+    function addToCart(index){
+     
+      document.getElementById("cartBtn").innerHTML = `Cart : ${cart.length}`;
+      console.log("Cart:", cart);
+    }
+
+    function addNewStudent(){
+      let name = prompt("Enter student name:");
+      if(name){
+        students.push(name);
+        showStudents();
+      }
+    }
+
+   
+    document.getElementById("addBtn").addEventListener("click", addNewStudent);
+
+    
+    showStudents();
+
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day 10</title>
+  </head>
+  <body>
+    <!-- <input type="text" id="name" placeholder="enter a name" /> -->
+    <!-- <input type="text" id="rollno" placeholder="enter a id" /> -->
+    <!-- <button id="submit" onclick="studentData">submit</button> -->
+    <script>
+      //    studentData = [
+      //     {
+      //         name:"shruti",
+      //         rollno: 16
+      //     },
+      //     {
+      //         name:"anee",
+      //         rollno: 1,
+      //     }
+      //    ]
+      //    function studentData(){
+      //     let name = document.getElementById("name").value;
+      //     let rollno = document.getElementById("rollno").value;
+      //     studentData.push({name:name,rollno:rollno})
+      //    }
+
+      const array = [1,2,3,4,5,6,7,8,9,10]
+      // const num = 81;
+      // newArray = []
+
+      // for( let i of array){
+      //     for (let x = 0 ; x <= array.length-1; x++){
+      //         if((array[i]/ array[x+1])/2 == num )
+      //         newArray.push({num1:array[i], num2:array[x+1]})              
+      //     }
+      // }
+
+    //   const array = [1, 2, 3, 4, 5, 6, 7];
+    //   const num = 10;
+    //   let newArray = [];
+
+    //   for (let i = 0; i < array.length; i++) {
+    //     for (let j = i + 1; j < array.length; j++) {
+    //       if (array[i] + array[j] === num) {
+    //         newArray.push([array[i], array[j]]);
+    //       }
+    //     }
+    //   }
+
+
+
+
+
+      // console.log(newArray);
+
+
+
+
+      let newArray = []
+      // for(let a of array){
+      //   let n1 = a
+
+      //   for(let i of array){
+      //     let n2 = i
+      //     let result =(n1 + n2)/2
+      //     if(result == 8){
+      //       newArray.push({num1:n1,num2:n2})
+      //     }
+      //   }
+      // }
+
+
+      for(let i = 0; i < array.length ; i ++){
+        let num = array[i]*array[array.length-1-i]
+        newArray.push(num)
+      }
+      console.log(newArray);
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bus Seat Booking</title>
+  <style>
+    .bus {
+      display: grid;
+      grid-template-columns: repeat(5, 60px); /* 5 columns */
+      gap: 10px;
+      margin: 20px;
+    }
+    .seat {
+      width: 60px;
+      height: 60px;
+      background-color: red;  /* seat available = red */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    .booked {
+      background-color: green; /* seat booked = green */
+    }
+    #bookBtn {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Bus Seat Booking (4x5)</h2>
+  <div id="bus" class="bus"></div>
+  <button id="bookBtn">Book Random Seat</button>
+ 
+  <script>
+    // Create 2D array (4 rows x 5 columns)
+    let rows = 4, cols = 5;
+    let seatNumber = 1;
+ 
+    let busDiv = document.getElementById("bus");
+ 
+    for (let i = 0; i < rows; i++) {
+      for (let j = 0; j < cols; j++) {
+        let seat = document.createElement("div");
+        seat.classList.add("seat");
+        seat.textContent = seatNumber; // show seat number
+        seat.dataset.booked = "false";
+ 
+        // Seat click event
+        seat.addEventListener("click", function() {
+          if (seat.dataset.booked === "false") {
+            seat.classList.add("booked");
+            seat.dataset.booked = "true";
+          } else {
+            alert("Seat " + seat.textContent + " is already booked!");
+          }
+        });
+ 
+        busDiv.appendChild(seat);
+        seatNumber++;
+      }
+    }
+ 
+    // Random seat booking
+    document.getElementById("bookBtn").addEventListener("click", function() {
+      let seats = document.querySelectorAll(".seat");
+      let availableSeats = Array.from(seats).filter(s => s.dataset.booked === "false");
+ 
+      if (availableSeats.length === 0) {
+        alert("All seats are booked!");
+        return;
+      }
+ 
+      let randomSeat = availableSeats[Math.floor(Math.random() * availableSeats.length)];
+      randomSeat.classList.add("booked");
+      randomSeat.dataset.booked = "true";
+ 
+      alert("Random Seat Booked: " + randomSeat.textContent);
+      
+    });
+  </script>
+</body>
+</html>
+ 

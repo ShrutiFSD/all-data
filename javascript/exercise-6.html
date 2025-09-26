@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const array1 = [1, 2, 3, 4, 5];
+      //   const array2 = [6, 7, 8, 9, 10];
+      //   const array3 = [11, 12, 13, 14, 15];
+      //   // let mergedArray = array2.concat(array1).concat(array3)
+      //   //   [...array1 ,...array2]                                   -----SPREAD OPERATOR
+
+      //   let mergedArray = [...array1, ...array2, ...array3];
+      //   console.log(mergedArray);
+
+      // console.log(array1 +","+ array2)
+
+      //   let ascending = [...mergedArray];
+      //   for (let i = 0; i < ascending.length; i++) {
+      //     for (let j = 0; j < ascending.length - 1; j++) {
+      //       if (ascending[j] > ascending[j + 1]) {
+      //         let temp = ascending[j];
+      //         ascending[j] = ascending[j + 1];
+      //         ascending[j + 1] = temp;
+      //       }
+      //     }
+      //   }
+      //   console.log("Ascending:", ascending);
+
+      // for (let a = 0 ; a <= mergedArray.length-1; a++){
+      //     for(let i = 0; i <= mergedArray.length-1; i++){
+      //         if(mergedArray[i] > mergedArray[i + 1]){
+      //             let temp = mergedArray[i]
+      //             mergedArray[i] = mergedArray[i + 1]
+      //             mergedArray[i+1] = temp
+      //         }
+      //     }
+      // }
+      //console.log(mergedArray)
+
+      //   array = [1, 2, 33, 55, 100];
+      //   let x = array[0];
+      //   for (let i = 0; i <= array.length - 1; i++) {
+      //     if (x < array[i]) {
+      //       x = array[i];
+      //     }
+      //   }
+      //   console.log(x);
+
+        array = [1, 2, 33, 55, 100];
+        let y = array[0];
+        let x = array[0]
+
+        for (let i = 0; i <= array.length - 1; i++) {
+            
+          if (y < array[i]) {
+            y = array[i];
+          }
+          if(x > array[i]){             
+            x = array[i]
+          }
+        }
+
+        console.log(y);
+
+        console.log(x);
+
+     
+    </script>
+  </body>
+</html>

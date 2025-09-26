@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DICTIONary</title>                
+  </head>
+  <body>
+    <script>
+      //   let array = [
+      //     {
+      //       id: 1,
+      //       day: "monday",
+      //       events: {
+      //         event1: "Exam",
+      //         event_2: "Project",
+      //       },
+      //     },
+      //   ];
+
+      //   console.log(array[0].events.event1);
+      //   console.log(array[0].events.event_2);
+
+      let studentData = [
+  {
+    id: 1,
+    name: "shruti",
+    marks: { html: 95, css: 90, js: 76 },
+    skills: ["coding", "swimming", "dancing", "communication"],
+  },
+  {
+    id: 2,
+    name: "Ayush",
+    marks: { html: 95, css: 90, js: 85 },
+    skills: ["coding", "swimming", "speaking", "communication", "programming"],
+  },
+  {
+    id: 3,
+    name: "Ashish",
+    marks: { html: 90, css: 90, js: 75 },
+    skills: ["coding", "swimming", "fighting"],
+  },
+  {
+    id: 4,
+    name: "bhushan",
+    marks: { html: 85, css: 90, js: 80 },
+    skills: ["coding", "marketing"],
+  },
+  {
+    id: 5,
+    name: "pratik",
+    marks: { html: 90, css: 90, js: 90 },
+    skills: ["coding", "singing", "teaching"],
+  },
+];
+
+      // console.log(studentData[0].name)
+      // console.log(studentData[0].marks.html)
+
+      // TO FIND AVERAGE OF MARKS
+
+    //  let htmlAvg = 0;
+      //let sum = 0;
+      //for (let i = 0; i <= studentData.length - 1; i++) {
+       // sum += studentData[i].marks.html;
+     // }
+    //  htmlAvg = sum / studentData.length;
+      // console.log(htmlAvg);
+
+      // TO FIND WHO HAS MORE SKILLS
+
+    //   let studentName = studentData[0].name;
+    //   let skillLength = studentData[0].skills.length;
+
+    //   for (let i = 0; i <= studentData.length - 1; i++) {
+    //     if(studentData[i].skills.length > skillLength){
+    //         skillLength = studentData[i].skills.length;
+    //         studentName = studentData[i].name;
+    //     }
+    //   }
+   
+    //   console.log(studentName);
+
+      for (let i = 0; i <= studentData.length-1; i++) {
+  let marks = studentData[i].marks;
+  let total = marks.html + marks.css + marks.js;
+  let percentage = (total / 300) * 100;
+
+  console.log(studentData[i].name + " Percentage is " + percentage + "%");
+}
+
+    </script>
+  </body>
+</html>

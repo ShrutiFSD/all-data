@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <style>
+        /* Header Styling */
+        .header {
+            width: 100vw;
+            height: 15vh;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            color: white;
+        }
+ 
+        header button {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #00c853, #009624);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+ 
+        header button:hover {
+            background: linear-gradient(135deg, #1de9b6, #00c853);
+            transform: scale(1.05);
+        }
+ 
+        /* Product Container */
+        #display {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+ 
+        /* Product Card */
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+ 
+        .card:hover {
+            transform: scale(1.05);
+        }
+ 
+        .card h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+        }
+ 
+        .card p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: green;
+        }
+ 
+        .card button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #ff5722;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+ 
+        .card button:hover {
+            background: #e64a19;
+        }
+    </style>
+</head>
+ 
+<body>
+    <header class="header">
+        <h1 id="product-count">0 Products</h1>
+        <button onclick="addProducts()">Add Product</button>
+        <button onclick="openCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+    </header>
+ 
+    <div id="display"></div>
+ 
+    <!-- Cart Modal -->
+    <div id="cartModal">
+ 
+        <button id="closeCart" onclick="closeCart()">X</button>
+        <ul id="cartItems"></ul>
+        <h3 id="totalPrice"></h3>
+ 
+    </div>
+ 
+    <script src="./productData.js"></script>
+    <script>
+        let display = document.getElementById("display");
+        let count = document.getElementById("product-count");
+        let cartCount = document.getElementById("cart-count");
+        let cartItemsList = document.getElementById("cartItems");
+        let totalPriceEl = document.getElementById("totalPrice");
+ 
+        let cart = [];
+ 
+        function showData() {
+            display.innerHTML = productData.map((p, index) =>
+                `<div class="card">
+                    <h3>${p.productName}</h3>
+                    <p>₹${p.price}</p>
+                    <button onclick="addToCart(${index})">Add to Cart</button>
+                </div>`
+            ).join("");
+            count.innerText = productData.length + " Products";
+        }
+ 
+        function addProducts() {
+            let name = prompt("Enter product name:");
+            let price = prompt("Enter product price:");
+            if (name && price) {
+                productData.push({ productName: name, price: +price });
+                showData();
+            }
+        }
+ 
+        function addToCart(index) {
+            cart.push(productData[index]);
+            cartCount.innerText = cart.length;
+        }
+ 
+        function openCart() {
+            cartItemsList.innerHTML = cart.map((item, i) =>
+                `${item.productName} - ₹${item.price}
+         <button onclick="removeFunction(${i})">Remove</button>`
+            ).join("<br/>");
+ 
+            let total = cart.reduce((sum, item) => sum + item.price, 0);
+            totalPriceEl.innerText = "Total: ₹ " + total;
+            document.getElementById("cartModal").style.display = "flex";
+        }
+ 
+        function removeFunction(index) {
+            cart.splice(index, 1);
+            cartCount.innerText = cart.length;
+            openCart();
+        }
+ 
+ 
+ 
+        function closeCart() {
+            document.getElementById("cartModal").style.display = "none";
+        }
+ 
+        showData();
+        
+    </script>
+</body>
+ 
+</html>
+ 
+ 

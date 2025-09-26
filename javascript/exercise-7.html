@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // const array = [5,1]
+      // let x = array[0]
+      // let y =  array[1]
+
+      // array[0] = y;
+      // array[1] = x;
+      // console.log(array)
+
+      // const array = [ 1,5,2]
+      // let x = array[0]
+      // let y = array[1]
+      // let z = array[2]
+
+      // if(x > y){
+      //     array[0] = y;
+      //     array[1] = x;
+
+      // }
+      // if(array[1]>z){
+      //     array[1] = z;
+      //     array[2] = x;
+
+      // }
+      // console.log(array)
+
+      //   const array = [3, 2, 1, 0];
+      //   for (let a = 0; a <= array.length - 1; a++) {
+      //     for (let i = 0; i <= array.length - 1; i++) {
+      //       if (array[i] > array[i + 1]) {
+      //         let x = array[i];
+      //         array[i] = array[i + 1];
+      //         array[i + 1] = x;
+      //       }
+      //     }
+      //   }
+      //   console.log(array);
+
+      
+
+      let arr = [5, 3, 9, 1, 7];
+
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length - 1; j++) {
+          if (arr[j] > arr[j + 1]) {
+            
+            let temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+          }
+        }
+      }
+
+      console.log("Ascending:", arr);
+
+      
+    </script>
+  </body>
+</html>

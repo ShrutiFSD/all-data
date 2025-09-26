@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="changeNumber()">Add string</button>
+    <pre id="display"></pre>
+    <script>
+        // let array = [
+        //     [0,0,0,0],
+        //     [0,0,0,0],
+        //     [0,0,0,0],
+        //     [0,0,0,0]
+        // ]
+
+       
+        // let a = 0
+        // let count = 1;
+        // let x = 0;
+        // let y = 0;
+
+        // function changeNum(){
+
+        //     if(a == 4){
+        //         y = 0
+        //         x++
+        //     }
+
+
+        //     array[x][y] = count;
+        //     y++;
+        //     count++
+        // }
+        // console.log(changeNum())
+        // console.log(changeNum())
+        // console.log(changeNum())
+        // console.log(changeNum())
+
+
+
+
+//         let array = [
+//     [0,0,0,0],
+//     [0,0,0,0],
+//     [0,0,0,0],
+//     [0,0,0,0]
+// ]
+
+// let count = 1;
+// let x = 0;
+// let y = 0;
+
+// function changeNum(){
+//     if(y == 4){   // check column index, not 'a'
+//         y = 0;
+//         x++;
+//     }
+
+//     array[x][y] = count;
+//     y++;
+//     count++;
+
+//     return array; // return array to see changes
+// }
+
+
+
+// let array = [
+//     [0,0,0,0],
+//     [0,0,0,0],
+//     [0,0,0,0],
+//     [0,0,0,0]
+// ]
+
+// let a = 0;
+// let count = 1;
+// let x = 0;
+// let y = 0;
+
+// function changeNum(){
+//   for(let i = 1;i<= 16;i++){
+//     array[x][y] = count;
+//     count = count + 2;
+//     y++;
+//     a++;
+
+//     if(a == 4){
+//         y == 0;
+
+//         x++;
+//         a =0
+//     }
+
+//   }
+// }
+
+
+// console.log(changeNum());
+// console.log(changeNum());
+// console.log(changeNum());
+// console.log(changeNum());
+// console.log(changeNum());
+// console.log(changeNum());
+// console.log(changeNum());
+// console.log(changeNum());
+// console.log(changeNum());
+// console.log(changeNum());
+// console.log(changeNum());
+// console.log(changeNum());
+// console.log(changeNum());
+// console.log(changeNum());
+// console.log(changeNum());
+// console.log(changeNum());
+
+
+
+
+
+
+        //  let newArray = ["Date","Days","Week","Year"] 
+
+        // let toStore = []
+
+        // for(let i = 0;i < array.length;i++){
+        //     toStore[i]= newArray[i].split("")
+
+
+        // }
+        // console.log(toStore)
+
+
+
+
+    //     function addString(){
+    //         let input = promt ()
+
+    //         if(input. length== 4){
+    //             let a= input.split
+    //             array[1]= a
+    //             x++;
+    //         }
+    //    }
+    //    console.log(addString)
+   
+
+         let array = [
+            [0,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0],
+        ]
+        let x = 0;
+       
+        function changeNumber() {
+            let input = prompt("Enter a Name ");
+            if (input.length == 4 && x < 4) {
+                let str = input.split("");
+                array[x] = str
+                x++
+            }
+               document.getElementById("display").innerHTML = array;
+        }
+       
+     
+   
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
