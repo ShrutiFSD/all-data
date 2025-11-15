@@ -63,4 +63,16 @@ for i in range(3):
     table.append(value)
 
 print(table)
+
+
+
+# array = []
+
+# print(array)
+
+# a = 10
+# b = 20
+# c = 30
+
+# array.append(a)
   
