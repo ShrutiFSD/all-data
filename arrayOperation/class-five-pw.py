@@ -34,3 +34,5 @@ elif(isPresent and specialCharacter):
     print("string contains a number and a special charater")       
 else:
     print("String doesn't contain a number")
+
+    
