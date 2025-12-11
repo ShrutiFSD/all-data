@@ -13,6 +13,7 @@ int main(){
 
     for(i = 0; i < strlen(str)-1; i++){
         if((str[i]== 'a'))
+        
     }
 
 }
